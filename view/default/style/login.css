@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+#login{
+	padding:30px 0 0 0;
+}
+#login form dl dd{
+	padding:8px 0 0 250px;	
+}
+#login form dl dd{
+	position:relative;
+}
+#login form dl dd select{
+	width:159px;
+}
+#login form dl dd.face input[type='button'],#login form dl dd input[type='checkbox']{
+	margin:5px 0 0 60px;
+}
+#login form dl dd img{
+	display:normal;
+	padding:0 0 0 61px;
+}
+#login form dl dd span.change{
+	color:green;
+	cursor:pointer;
+	position:absolute;
+	top:10px;
+	left:460px;
+}

@@ -1,0 +1,128 @@
+@CHARSET "UTF-8";
+body,p,form,h1,h2,h3,ul,li,dl,dt,dd{
+	margin:0;
+	pdding:0;
+}
+body{
+	font-size:12px;
+	background:#DDEEF2;
+}
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+.error{
+	color:red;
+}
+.red{
+	color:red;
+}
+.green{
+	color:green;
+}
+h2,dl.form{
+	font-size:12px;
+	border:1px solid #BBDDE5;
+	padding:10px;
+	margin:10px;
+	background:#F4FAFB;
+	color:#333;
+	color:#335B64;
+}
+h2 a{
+	float:right;
+	background:url(../images/add.gif) no-repeat left center;
+	font-size:12px;
+	color:#335B64;
+	padding:0 0 0 18px;
+}
+h2 a:hover{
+	color:#f60;
+	text-decoration:underline;
+}
+#list{
+	margin:0 10PX;
+}
+#list table.public{
+	width:100%;
+	border:1px solid #BBDDE5;
+	background:#EEF8F9;
+}
+#list table.public tr{
+	text-align:center;
+	background:#F4FAFB;
+}
+#list table.public tr th{
+	height:30px;
+	line-height:30px;
+	background:url(../images/th_bg.gif);
+	font-weight:normal;
+}
+#list table.public tr:hover{
+	background:orange;
+}
+#list table.public tr td{
+	height:29px;
+	line-height:29px;
+}
+#list table.public tr td input.sort{
+	width:25px;
+	text-align:center;
+}
+#list p.return{
+	text-align:center;
+	padding:10px 0 0 0;
+	font-size:14px;
+}
+#list table.public img{
+	cursor:pointer;
+}
+form dl.form dd{
+	padding:5px 0;
+}
+form dl.form dd input.text{
+	border:1px solid #666;
+	background:#fff;
+	width:150px;
+}
+form textarea{
+	border:1px solid #666;
+	background:#fff;
+}
+form dl.form dd select{
+	width:153px;
+}
+form dl.form dd input[type='submit']{
+	padding:1px 0;
+}
+span.succ{
+	background:url(../images/reg_succ.png) no-repeat 2px center;
+	display:inline-block;
+	width:20px;
+}
+#page{
+	display:block;
+	clear:both;
+	padding:10px 0;
+	font-size:14px;
+	text-align:center;
+}
+#page a,#page span.disable{
+	border:1px solid #666;
+	padding:2px 5px;
+	margin:0 2px;
+}
+#page span.disable{
+	border:1px solid #999;
+	color:#999;
+}
+#page a:hover,#page a.index{
+	background:#538269;
+	color:#fff;
+	text-decoration:none;
+}
+#page select optgroup label{
+	font-style:normal;
+}

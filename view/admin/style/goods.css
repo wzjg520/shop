@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+form dl.form dd textarea{
+	width:150px;
+	height:80px;
+}
+form dl.form dd select{
+	width:180px;
+	background:#fff;
+	border:1px solid #666;
+}
+form dl.form dd input.text{
+	width:352px;
+}
+form dl.form dd optgroup{
+	font-style:normal;
+	color:#333;
+	background:#eee;
+}
+form dl.form dd option{
+	background:#fff;
+}
+form dl.form dd input.small{
+	width:70px;
+}
+table.public td a:hover{
+	text-decoration:underline;
+}

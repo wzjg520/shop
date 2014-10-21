@@ -1,0 +1,227 @@
+@CHARSET "UTF-8";
+#sait{
+	background:url(../images/sait_bg.png) repeat-x;
+	height:36px;
+	line-height:36px;
+	padding:0 0 0 15px;
+	border:1px solid #C5E4FF;
+	border-top:none;
+}
+#sidebar{
+	width:200px;
+	float:left;
+	margin:10px 0 0 0;
+}
+#sidebar h2{
+	height:34px;
+	line-height:34px;
+	background:url(../images/h2_bg.png) repeat-x;
+	text-indent:25px;
+	color:#56A5EE;
+	font-size:12px;
+}
+#sidebar ul{
+	border:1px solid #C5E4FF;
+	border-top:none;
+	padding:10px 10px 10px 30px;
+	margin:0 0 10px 0;
+}
+#sidebar ul li{
+	height:20px;
+	line-height:20px;
+	background:url(../images/sidebar_line.png) no-repeat left center;
+	padding:0 0 0 25px;
+}
+#sidebar ul li a{
+	height:20px;
+	line-height:20px;
+	display:block;
+	color:#369;
+	cursor:pointer;
+}
+#sidebar ul li a:hover{
+	color:#c30;
+	text-decoration:underline;
+	
+}
+#sidebar ul li a span{
+	color:gray;
+}
+#sidebar div{
+	border:1px solid #C5E4FF;
+	border-top:none;
+	margin:0 0 10px 0;
+}
+#sidebar dl{
+	padding:10px;
+}
+#sidebar dl dt img{
+	display:block;
+	margin:0 auto;
+	border:1px solid #ccc;
+}
+#sidebar dl dd{
+	padding:5px 0 0 5px;
+}
+#sidebar dl dd.price{
+	color:gray;
+	text-align:center;
+	font-size:14px;
+	font-family:Tahoma;
+	font-weight:bold;
+}
+#sidebar dl dd.title a{
+	color:#666;
+}
+#sidebar dl dd.title a:hover{
+	text-decoration:underline;
+}
+#main{
+	width:785px;
+	float:right;
+	margin:10px 0 0 0;
+}
+#main h2{
+	height:34px;
+	line-height:34px;
+	font-size:14px;
+	color:#333;
+	border-bottom:1px dashed #ccc;
+}
+#main dl.pic{
+	width:304px;
+	float:left;
+	padding:10px 0 0 0;
+}
+#main dl.pic dt{
+	width:304px;
+	height:304px;
+	border:1px solid #ccc;
+}
+#main dl.pic dt img{
+	margin:2px auto;
+}
+#main dl.pic dd{
+	text-align:center;
+	padding:10px 0 0 0;
+}
+#main dl.pic dd a{
+	 color:#026ACB;
+}
+#main dl.pic dd a:hover{
+	text-decoration:underline;
+}
+#main dl.text{
+	float:left;
+	padding:10px 0 0 20px;
+}	
+#main dl.text dd{
+	padding:6px;
+}
+
+#main dl.text dd input.num{
+	width:40px;
+}	
+#main dl.text dd span.sale{
+	font-family:Tahoma;
+	font-size:20px;
+	font-weight:bold;
+	color:red;
+}	
+#main dl.text dd span.market{
+	font-size:14px;
+	color:#666;
+	text-decoration:line-through;	
+}
+#main dl.text dd span.sale_num{
+	color: #CC6600;
+    font-family: Tahoma;
+    font-weight: bold;
+}
+#main dl.text dd span.gray{
+	color:gray;
+}
+#main dl.text dd input.submit{
+	background:url(../images/buy.gif) no-repeat left center;
+	width:144px;
+	height:35px;
+	border:none;
+	float:left;
+    cursor: pointer;
+	margin:0 10px 0 0;
+}
+#main dl.text dd.buy_button a{
+	float:left;
+}
+#main div.content{
+	clear:both;
+	padding:15px 0 0 0;
+}
+#main div.content ul.channel{
+	height:30px;
+	border-bottom:1px solid blue;
+}
+#main div.content ul.channel li{
+	float:left;
+	width:86px;
+	height:30px;
+	text-align:center;
+	margin:0 4px 0 0;
+	line-height:30px;
+	cursor:pointer;
+	background:url(../images/content_bg.png) no-repeat right center
+}
+#main div.content ul.channel li.selected{
+	background-position:left;
+}
+#main div.content div.c{
+	padding:10px 0 0 0;
+}
+#main div.content div.c span.star{
+	color:orange;
+}
+.commend_left {
+	width:100px;
+	height:50px;
+	float:left;
+	margin:10px 0;
+}
+.commend_left p {
+	padding:0 0 5px 0;
+}
+.commend_left .star {
+	color:orange;
+}
+.commend_right {
+	width:685px;
+	float:right;
+	margin:10px 0;
+}
+.commend_right p {
+	padding:0 0 10px 0;
+}
+.commend_right .attr {
+	color:#666;
+}
+.commend_right em {
+	float:right;
+	color:#666;
+	font-style:normal;
+}
+div.c p.re_commend{
+	border-bottom:1px dashed #ccc;
+	clear:both;
+}
+div.c table{
+	text-align:center;
+	font-size:12px;
+}
+div.c table th{
+	background:#eee;
+	padding:10px;
+}
+div.c table td{
+	border-bottom:1px dashed #ccc;
+
+	padding:20px 0;
+}

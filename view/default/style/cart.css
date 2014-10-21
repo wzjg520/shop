@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+#cart{
+	margin:10px 0 0 0;
+	border:1px solid #BBDDE5;
+}
+#cart h2{
+	text-align:left;
+	height:30px;
+	line-height:30px;
+	font-weight:bold;
+	font-size:14px;
+	padding:0 0 0 15px;
+	background:#EEF8F9;
+}
+#cart table{	
+	width:98%;
+	border:1px solid #BBDDE5;
+	border-top:none;
+	margin:10px;
+	text-align:center;
+	background:#71c7fa;	
+	border-spacing:1px;
+	font-size:12px;
+}
+#cart table td,#cart table th{
+	background:#fff;
+	padding:10px 5px;	
+}
+#cart table td input.num{
+	width:40px;
+	text-align:center;
+}
+#cart p{
+	margin:10px;
+	border:1px solid #BBDDE5;
+	padding:10px;
+}
+#cart p span{
+	float:right;
+}
+#cart div{
+	padding:0 0 10px 84.8%;
+}

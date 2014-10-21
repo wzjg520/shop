@@ -1,0 +1,138 @@
+@CHARSET "UTF-8";
+body,p,form,h1,h2,h3,ul,li,dl,dt,dd{
+	margin:0;
+	padding:0;
+}
+a{
+	cursor:pointer;
+}
+img{
+	display:block;
+	border:none;
+}
+body{
+	font-size:12px;
+	width:1000px;
+	margin:0 auto;
+}
+ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+label.error,.red{
+	color:red;	
+}
+span.succ{
+	background:url(../images/succ.png) no-repeat 2px center;
+	display:inline-block;
+	width:20px;
+}
+.green{
+	color:green;
+}
+#header{
+	height:60px;
+	margin:0 0 10px 0;
+}
+#header h1{
+	width:200px;
+	height:60px;
+	float:left;
+	background:url(../images/logo.png) no-repeat left center;
+	text-indent:-9999px;
+	font-size:12px;
+}
+#header h1 a{
+	width:200px;
+	height:60px;
+	display:block;	
+}
+#header p{
+	float:right;
+	height:60px;
+	padding:10px 0 0 10px;
+}
+#header p a{
+	display:inline-block;
+}
+#nav{
+	height:26px;
+	padding:0 0 0 30px;
+}
+#nav ul{
+	height:26px;
+}
+#nav ul li{
+	height:26px;
+	width:82px;
+	float:left;
+	display:block;
+}
+#nav ul li a{
+	height:26px;
+	line-height:26px;
+	width:78px;
+	display:block;
+	text-align:center;
+	background:url(../images/nav_bg.png) no-repeat left center;
+}
+#nav ul li a:hover,#nav ul li a.selected{
+	background:url(../images/nav_bg.png) no-repeat right center;
+	color:#fff;
+}
+#search {
+	height:36px;
+	border:1px solid #5CB4E6;
+	background:url(../images/search_bgline.png);
+}
+#search form{
+	padding:6px 0 0 550px;
+}
+#search a{
+	color:#fff;	
+}
+#search a:hover{
+	text-decoration:underline;
+}
+#page{
+	display:block;
+	clear:both;
+	padding:10px 0;
+	font-size:14px;
+	text-align:center;
+}
+#page a,#page span.disable{
+	border:1px solid #666;
+	padding:2px 5px;
+	margin:0 2px;
+}
+#page span.disable{
+	border:1px solid #999;
+	color:#999;
+}
+#page a:hover,#page a.index{
+	background:#538269;
+	color:#fff;
+	text-decoration:none;
+}
+#page select optgroup label{
+	font-style:normal;
+}
+#sait{
+	background:url(../images/sait_bg.png) repeat-x;
+	height:36px;
+	line-height:36px;
+	padding:0 0 0 15px;
+	border:1px solid #C5E4FF;
+	border-top:none;
+}
+#footer{
+	padding:20px;
+	clear:both;
+	text-align:center;
+}
+#footer p{
+	padding:5px 0;
+}

@@ -1,0 +1,129 @@
+@CHARSET "UTF-8";
+#sait{
+	background:url(../images/sait_bg.png) repeat-x;
+	height:36px;
+	line-height:36px;
+	padding:0 0 0 15px;
+	border:1px solid #C5E4FF;
+	border-top:none;
+}
+#sidebar{
+	width:200px;
+	float:left;
+	margin:10px 0 0 0;
+}
+#sidebar h2{
+	height:34px;
+	line-height:34px;
+	background:url(../images/h2_bg.png) repeat-x;
+	text-indent:25px;
+	color:#56A5EE;
+	font-size:12px;
+}
+#sidebar ul{
+	border:1px solid #C5E4FF;
+	border-top:none;
+	padding:10px 10px 10px 30px;
+	margin:0 0 10px 0;
+}
+#sidebar ul li{
+	height:20px;
+	line-height:20px;
+	background:url(../images/sidebar_line.png) no-repeat left center;
+	padding:0 0 0 25px;
+}
+#sidebar ul li a{
+	height:20px;
+	line-height:20px;
+	display:block;
+	color:#369;
+	cursor:pointer;
+}
+#sidebar ul li a:hover{
+	color:#c30;
+	text-decoration:underline;
+	
+}
+#sidebar div{
+	border:1px solid #C5E4FF;
+	border-top:none;
+	margin:0 0 10px 0;
+}
+#main{
+	width:785px;
+	float:right;
+	margin:10px 0 0 0;
+}
+#main h2{
+	height:34px;
+	line-height:34px;
+	background:url(../images/list_h2_bg.png) repeat-x;
+	text-indent:25px;
+	color:#56A5EE;
+	font-size:12px;
+}
+#main h2 a{
+	float:right;
+	padding:0 10px 0 0;
+	color:green;
+}
+#main h2 a:hover{
+	text-decoration:underline;
+}
+#main table{	
+	width:100%;
+	border:1px solid #BBDDE5;
+	border-top:none;
+	margin:10px 0;
+	text-align:center;
+	background:#71c7fa;	
+	border-spacing:1px;
+	font-size:12px;
+}
+#main table caption{
+	font-size:14px;
+	font-weight:bold;
+	color:#0000ff;
+	height:30px;
+	line-height:30px;
+}
+#main table td,#main table th{
+	background:#fff;
+	padding:8px 0;	
+}
+#main table td textarea{
+	max-width:99%;
+	min-width:99%;
+}
+#main table td input.num{
+	width:40px;
+	text-align:center;
+}
+#main p{
+	margin:10px;
+	padding:10px;
+	text-align:center;
+}
+#main form dl dd{
+	padding:3px 240px;
+}
+#main form dl dd input.text{
+	width:200px;
+}
+#main form input.submit{
+	width:140px;
+	height:25px;
+	cursor:pointer;
+	background:url(../images/address.png) no-repeat center top;
+}
+#main table.left{
+	text-align:left;
+	text-indent:10px;
+}
+#main table.left td.submit{
+	text-indent:0;	
+	text-align:center;
+}
+	
+	
+	

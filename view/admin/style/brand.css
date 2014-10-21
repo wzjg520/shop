@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+form dl.form dd textarea{
+	width:200px;
+	height:80px;
+}
+form dl.form dd input.text{
+	width:200px;
+}
+form dl.form dd select{
+	width:205px;
+	background:#fff;
+	border:1px solid #666;
+}
+form dl.form dd option{
+	background:#fff;
+}

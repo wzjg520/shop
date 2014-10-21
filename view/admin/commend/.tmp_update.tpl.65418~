@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>商城后台管理</title>
+<link rel="stylesheet" type="text/css" href='view/admin/style/admin.css'/>
+<link rel="stylesheet" type="text/css" href='view/admin/style/basic.css'/>
+<script type="text/javascript" src="view/admin/js/jquery.js"></script>
+<script type="text/javascript" src="view/admin/js/jquery.form.js"></script>
+<script type="text/javascript" src="view/admin/js/jquery.validate.js"></script>
+<script type="text/javascript" src="view/admin/js/channel.js"></script>
+<script type="text/javascript" src="view/admin/js/manage_update.js"></script>
+</head>
+<body>
+<h2><a href="?a=manage">返回管理员列表</a>系统 -- 修改管理员</h2>
+<form method="post" action="?a=manage&m=runupdate&id={$oneManage->id}" name="update" id="updateForm">
+	<input type="hidden" name="url" value="{$prev_url}"/>
+	<dl class="form">
+		<dd>
+			用 户 名： {$oneManage->user}
+		</dd>
+		<dd>
+		<label for="pwd">密　　码：</label>
+		<input type="password" id="pwd" name="pwd" class="text"/><span>（*大于6位）</span>
+		</dd>
+		<dd>
+		<label for="notpwd">确认密码：</label>
+		<input type="password" id="notpwd" name="notpwd" class="text"/><span>（*必须和密码一致）</span>
+		</dd>
+		<dd>
+		<label for="level">等　　级：</label>
+		<select name="level" id="level">
+						{if $oneManage->level=='0'}
+							<option value="0">--请选择一个权限--</option>
+						{else}
+							<option value="0" selected="selected">--请选择一个权限--</option>
+						{/if}
+						{if $oneManage->level=='1'}
+							<option value="1" selected="selected">--普通管理员--</option>
+						{else}
+							<option value="1">--普通管理员--</option>
+						{/if}
+						{if $oneManage->level=='2'}
+							<option value="2" selected="selected">--商品发布专员--</option>
+						{else}
+							<option value="2">--商品发布专员--</option>
+						{/if}
+						{if $oneManage->level=='3'}
+							<option value="3" selected="selected">--订单处理专员--</option>
+						{else}
+							<option value="3">--订单处理专员--</option>
+						{/if}
+						{if $oneManage->level=='4'}
+							<option value="4" selected="selected">--超级管理员--</option>
+						{else}
+							<option value="4">--超级管理员--</option>
+						{/if}
+					</select><span>（*必须选定一个权限）</span>
+		</dd>
+		<dd><input type="submit" name="send" value="修改管理员"/></dd>
+	</dl>
+</form>
+
+</body>
+</html>

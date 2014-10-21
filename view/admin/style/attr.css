@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+form dl.form dd textarea{
+	width:300px;
+	height:80px;
+}
+form dl.form dd input.text{
+	width:300px;
+}

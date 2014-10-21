@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+.succ{
+	border:1px solid #BBDDE5;
+	background:#EEF8F9;
+	padding:0 10px 10px 10px;
+}
+.succ p{
+	color:green;
+	padding:10px 0 0 0;
+}
+.succ p a{
+	color:#335B64;
+}
+.succ p a:hover{
+	text-decoration:underline;
+	color:blue;
+}

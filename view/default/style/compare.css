@@ -1,0 +1,105 @@
+@CHARSET "UTF-8";
+#sait{
+	background:url(../images/sait_bg.png) repeat-x;
+	height:36px;
+	line-height:36px;
+	padding:0 0 0 15px;
+	border:1px solid #C5E4FF;
+	border-top:none;
+}
+#sidebar{
+	width:200px;
+	float:left;
+	margin:10px 0 0 0;
+}
+#sidebar h2{
+	height:34px;
+	line-height:34px;
+	background:url(../images/h2_bg.png) repeat-x;
+	text-indent:25px;
+	color:#56A5EE;
+	font-size:12px;
+}
+#sidebar div{
+	border:1px solid #C5E4FF;
+	border-top:none;
+	margin:0 0 10px 0;
+}
+#sidebar dl{
+	padding:10px;
+}
+#sidebar dl dt img{
+	display:block;
+	margin:0 auto;
+	border:1px solid #ccc;
+}
+#sidebar dl dd{
+	padding:5px 0 0 5px;
+}
+#sidebar dl dd.price{
+	color:gray;
+	text-align:center;
+	font-size:14px;
+	font-family:Tahoma;
+	font-weight:bold;
+}
+#sidebar dl dd.title a{
+	color:#666;
+}
+#sidebar dl dd.title a:hover{
+	text-decoration:underline;
+}
+#main{
+	width:785px;
+	float:right;
+	margin:10px 0 0 0;
+}
+#main div.pro_list{
+	border:1px solid #C5E4FF;
+	border-top:none;
+	margin:0 0 10px 0;
+}
+#main h2{
+	height:34px;
+	line-height:34px;
+	background:url(../images/list_h2_bg.png) repeat-x;
+	text-indent:25px;
+	color:#56A5EE;
+	font-size:12px;
+}
+
+#main dl {
+	width:224px;
+	padding:15px 0 0 24px;
+	float:left;
+	color:#56A5EE;
+	font-size:14px;
+}	
+#main dl dt{
+	width:224px;
+	border:1px solid #C5E4FF;
+	
+}	
+#main dl dt img{
+	margin:2px 0 0 2px;
+}
+#main dl dd{
+	padding:10px 0;
+	border-bottom:1px solid #ccc;
+}
+#main dl dd strong{
+	font-size:14px;
+	font-family:Tahoma;
+	color:red;
+}	
+#main dl dd del{
+	color:#999;
+}	
+#main dl dd a:hover{
+	text-decoration:underline;
+}
+	
+	
+	
+	
+	
