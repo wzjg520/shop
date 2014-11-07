@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 define('FRONT_STYLE', 'default/');
 define('ADMIN_STYLE','admin/');
 define('SMARTY_SETCACHEDIR',ROOT_PATH.'/cache/');
@@ -19,7 +19,7 @@ define('UPLOAD_DIR','upload/');
 //数据库连接配置
 define('DB_DSN','mysql:host=localhost;dbname=mall');
 define('DB_USER','root');
-define('DB_PWD', 'ABC201314');
+define('DB_PWD', '');
 define('DB_CHARESET','SET NAMES UTF8');
 //设置表前缀
 define('DB_FREFIX','mall_');
