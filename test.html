@@ -133,6 +133,11 @@ $(function(){
 		$('#banner').stop().animate({
 			left : -700*(prev)-450
 		});
+		var left_w=parseInt($('#banner').css('left'));
+		if(left_w==-1850){
+			alert('要开始添加了')
+		}
+
 	}
 	
 	function banner_fn() {
