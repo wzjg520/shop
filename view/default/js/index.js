@@ -55,4 +55,69 @@ $(function(){
 		banner($('#banner ul li').get(banner_index),banner_index==0 ? $('#banner ul li').length-1 : banner_index-1);
 		banner_index++;
 	}
+	// 销售排行
+	$('#sale_num').find('li').hover(function(e){
+		var xx=Math.abs(e.pageX-$(this).offset().left-220);
+		var yy=Math.abs(e.pageY-$(this).offset().top-280);
+		// console.log(xx+'==='+yy)
+		if(yy>=260 && yy<=280){
+			$(this).find('.bg_hover').css('top','-290px').stop().animate({
+				'top':10
+			})
+		}
+		if(yy>=10 && yy<=30){
+			$(this).find('.bg_hover').stop().animate({
+				'top':10
+			})
+		}
+		if(xx>=210 && xx<=230){
+			$(this).find('.bg_hover').css({
+				'left':'-230px',
+				'top':10
+			}).stop().animate({
+				'left':10
+			})
+		}
+		if(xx>=10 && xx<=30){
+			$(this).find('.bg_hover').css({
+				'left':'240px',
+				'top':10
+			}).stop().animate({
+				'left':10
+			})
+		}
+
+	},function(){
+		$(this).find('.bg_hover').css({
+			'top':'300px',
+			'left':"10px"
+		})
+	})
+	// 品牌联盟
+	$('.brand').find('li').each(function(i){
+		$(this).find('img').css('top',parseInt((80-$(this).find('img').height())/2))                      
+    })
+	$('.brand').find('li').hover(function(){
+		var top_height=parseInt($(this).find('img').css('top'));
+		$(this).find('img').stop().animate({
+			width:120,
+			top:top_height+10,
+			left:-10,
+		}).css({
+			'zIndex':11,
+			'boxShadow':'0 0 3px #000'
+		})
+		// $(this).css('boxShadow','0 0 3px #000');
+	},function(){
+		var top_height=parseInt($(this).find('img').css('top'));
+		$(this).find('img').stop().animate({
+			width:100,
+			top:top_height-10,
+			left:0
+		}).css({
+			'zIndex':10,
+			'boxShadow':'none'
+		})
+		// $(this).css('boxShadow','none');
+	})
 });	

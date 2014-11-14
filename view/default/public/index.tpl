@@ -25,8 +25,74 @@
         <div class="paging subpattern"></div>
     </div>
 </div>
+<div id="sale_num">
+	<h2>销售排行</h2>
+	<p class="short_line"></p>
+	<div class="box">
+		<ul>
+		{foreach from=$hotSale key=key item=value}
+		{if  $key<5}
+			<li>
+				<a target="_blank" href="?a=details&navid={$value->nav}&goodsid={$value->id}"><img src="{$value->thumb_small}"/></a>
+				<div class="bg_hover">
+					<p class="price">￥{$value->price_sale}元</p>
+					<p class="see"><a target="_blank" href="?a=details&navid={$value->nav}&goodsid={$value->id}">去看看</a></p>
+					<p class="title"><a target="_blank" href="?a=details&navid={$value->nav}&goodsid={$value->id}">{$value->name}</a></p>
+				</div>
+			</li>
+		{/if}
+		{/foreach}
+		</ul>
+	</div>
+</div>
+<div id="main">
+	<h2>欢乐促销</h2>
+	<p class="short_line"></p>
+	<div class="pro_list">
+		{foreach from=$promoteGoods key=key item=value}
+		<dl>
+			<dt><a href="?a=details&navid={$value->nav}&goodsid={$value->id}"><img src="{$value->thumb_small}"/></a></dt>
+			<dd class="price"><strong>￥{$value->price_sale}元</strong> <del>￥{$value->price_market}元</del></dd>
+			<dd class="title"><a href="#">{$value->name}</a></dd>
+			<dd class="commend"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}#commend">已有{$value->count}人评价 </a> <span class="green">(销售{$value->sale_count}{$value->unit})</span></dd>
+			<dd class="buy">
+			<a href="?a=details&navid={$value->nav}&goodsid={$value->id}">购买</a> | 
+			<a href="?a=user&m=addCollect&id={$value->id}" target="blank">收藏</a> | 
+			<a href="?a=compare&m=setCompare&navid={$value->nav}&goodsid={$value->id}" onclick="javascript:return checkCompare('{$value->nav}')" target="blank">比较</a>
+			<span class="now_buy"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}">马上购买</a></span>
+			</dd>			
+		</dl>
+		{/foreach}
+		<div id="page">{$page}</div>
+	</div>
+	<h2>店家推荐</h2>
+	<p class="short_line"></p>
+	<div class="pro_list">
+		{foreach from=$recommendGoods key=key item=value}
+		<dl>
+			<dt><a href="?a=details&navid={$value->nav}&goodsid={$value->id}"><img src="{$value->thumb_small}"/></a></dt>
+			<dd class="price"><strong>￥{$value->price_sale}元</strong> <del>￥{$value->price_market}元</del></dd>
+			<dd class="title"><a href="#">{$value->name}</a></dd>
+			<dd class="commend"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}#commend">已有{$value->count}人评价 </a> <span class="green">(销售{$value->sale_count}{$value->unit})</span></dd>
+			<dd class="buy"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}">购买</a> | <a href="?a=user&m=addCollect&id={$value->id}" target="blank">收藏</a> | <a href="?a=compare&m=setCompare&navid={$value->nav}&goodsid={$value->id}" onclick="javascript:return checkCompare('{$value->nav}')" target="blank">比较</a>
+			<span class="now_buy"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}">马上购买</a></span>
+			</dd>			
+		</dl>
+		{/foreach}
+		<div id="page">{$page}</div>
+	</div>
+	<h2>品牌联盟</h2>
+	<p class="short_line"></p>
+	<div class="brand">
+		<ul>
+			{foreach from=$allBrand key=key item=value}
+			<li><a href="{$value->url}" target="_blank"><!-- {$value->name} --><img src="view/default/images/huahua_logo2.png" alt="花花家LOGO"></a></li>
+			{/foreach}
+		</ul>
+	</div>	
+</div>
 
-<div id="sidebar">
+<!-- <div id="sidebar">
 	<h2>商城公告</h2>
 	<div class="box">
 		<p>欢迎光临本店,我们竭诚为您服务：</p>
@@ -52,7 +118,7 @@
 	<div id="banner">
 		<img src="view/default/images/advert3.jpg" alt="白玉兰"/>
 		<img src="view/default/images/advert4.jpg" alt="桂花"/>
-		<img src="view/default/images/advert5.jpg" alt="竹外一支梅--花中君子"/>		
+		<img src="view/default/images/advert5.jpg" alt="竹外一支梅==花中君子"/>		
 		<ul>
 			<li>●</li>
 			<li>●</li>
@@ -95,7 +161,7 @@
 			{/foreach}
 		</ul>
 	</div>
-</div>
+</div> -->
 <p class="clear"></p>
 
 {include file='default/public/footer.tpl'}
