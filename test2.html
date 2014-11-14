@@ -143,23 +143,22 @@ $(function(){
 		banner_index++;
 	})
 	$('.left_btn').click(function(){
-		alert(3)
-		// $('.left_trant').html('');
-		// $('#banner').stop().animate({
-		// 	'left':-banner_index*img_w
-		// })
-		// if(banner_index==img_nums-1){
-		// 	var left=parseInt($('#banner').css('left'));
-		// 	$('.left_trant').html(left_html);
-		// 	$('#banner').stop().animate({
-		// 		'left':-banner_index*img_w
-		// 	},function(){
-		// 		$('#banner').css('left',0)
-		// 	})
-		// 	$('#banner').css('left',0)
-		// 	banner_index=0;
-		// }
-		// banner_index++;
+		$('.left_trant').html('');
+		$('#banner').stop().animate({
+			'left':banner_index*img_w
+		})
+		if(banner_index==1){
+			var left=parseInt($('#banner').css('left'));
+			$('.left_trant').html(left_html);
+			$('#banner').stop().animate({
+				'left':banner_index*img_w
+			},function(){
+				$('#banner').css('left',-)
+			})
+			$('#banner').css('left',0)
+			banner_index=4;
+		}
+		banner_index--;
 	})
 
 
