@@ -1,8 +1,114 @@
 @CHARSET "UTF-8";
+body{
+	background: #fff;
+}
 #reg{
 	padding:30px 0 0 0;
+	background: #f8f9f3;
+	height: 750px;
+}
+#reg form dl{
+	background: #fff;
+	width:600px;
+	padding:30px;
+	margin:0 auto;
+	padding-left: 40px;
 }
 #reg form dl dd{
+	padding:10px 0 0 0;
+	position:relative;
+}
+#reg dd input[type="text"],#reg dd input[type="password"]{
+	width:240px;
+	padding:4px;
+	height: 24px;
+	line-height: 24px;
+	border:1px solid #ddd;
+	border-radius: 4px;
+}
+#reg dd select{
+	border:1px solid #ddd;
+	height: 28px;
+	line-height: 28px;
+}
+#reg dd select:focus{
+	border:1px solid #ddd;
+}
+#reg dd input:focus{
+	border:1px solid #000;
+}
+#reg dd label{
+	display: inline-block;
+	width:70px;
+}
+#reg dd label.error{
+	width:auto;
+	padding-left: 6px;
+}
+#reg form dl dd select{
+	width:159px;
+}
+#reg form dl dd.face input[type='button']{
+	margin:0 0 0 30px;
+	padding:6px 14px;
+	border-radius: 2px;
+	vertical-align: 40px;
+	border:none;
+	background: #777;
+	color: #fff;
+}
+#reg form dl dd.face em{
+	font-style: normal;
+	vertical-align: 40px;
+}
+#reg form dl dd.code{
+	padding-top:15px;
+}
+#reg form dl dd.code img{
+	display:inline-block;
+	padding:0 0 0 74px;
+	width:120px;
+	height: 30px;
+}
+#reg form dl dd span{
+	padding-left: 6px;
+}
+#reg form dl dd span.change{
+	display: inline-block;
+	vertical-align: 10px;
+	cursor:pointer;
+}
+#reg form dl dd.face img{
+	display: inline-block;
+}
+#reg form dl dd.face label{
+	vertical-align: 40px;
+}
+#reg dd input.sub{
+	width:200px;
+	height: 36px;
+	line-height: 30px;
+	text-align: center;
+	background: #ec5e72;
+	color: #fff;
+	border:none;
+	font-size: 16px;
+	border-radius: 2px;
+	margin:20px 0 0 74px;
+	cursor:pointer;
+}
+#reg dt h2{
+    font-weight: normal;
+    font-size: 26px;
+}
+#reg dt p.short_line{
+    width:52px;
+    height: 3px;
+    background: red;
+    margin:10px 0 20px 0;
+}
+
+/*#reg form dl dd{
 	padding:8px 0 0 250px;	
 }
 #reg form dl dd{
@@ -24,4 +130,4 @@
 	position:absolute;
 	top:10px;
 	left:460px;
-}
+}*/

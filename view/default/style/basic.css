@@ -170,13 +170,16 @@ span.succ{
 	border:1px solid #666;
 	padding:2px 5px;
 	margin:0 2px;
+	color: #fff;
+	background: #ec5e72;
 }
 #page span.disable{
 	border:1px solid #999;
 	color:#999;
+	background: #fff;
 }
 #page a:hover,#page a.index{
-	background:#538269;
+	background:#ec5e72;
 	color:#fff;
 	text-decoration:none;
 }
@@ -184,13 +187,15 @@ span.succ{
 	font-style:normal;
 }
 #sait{
-	background:url(../images/sait_bg.png) repeat-x;
+	width:1180px;
+	margin:0 auto;
 	height:36px;
 	line-height:36px;
-	padding:0 0 0 15px;
-	border:1px solid #C5E4FF;
 	border-top:none;
+	background: url(../images/weizhi.png)no-repeat left center;
+	padding-left:20px;
 }
+
 #footer{
 	padding:20px;
 	clear:both;

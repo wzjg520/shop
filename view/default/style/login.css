@@ -1,27 +1,98 @@
 @CHARSET "UTF-8";
+body{
+	background: #fff;
+}
 #login{
 	padding:30px 0 0 0;
+	background: #f8f9f3;
+	height: 500px;
+}
+#login form dl{
+	background: #fff;
+	width:600px;
+	padding:30px;
+	margin:0 auto;
+	padding-left: 40px;
 }
 #login form dl dd{
-	padding:8px 0 0 250px;	
-}
-#login form dl dd{
+	padding:8px 0 0 0;
 	position:relative;
+}
+#login dd input{
+	width:240px;
+	padding:4px;
+	height: 24px;
+	line-height: 24px;
+	border:1px solid #ddd;
+	border-radius: 4px;
+}
+#login dd input:focus{
+	border:1px solid #000;
+}
+#login dd label{
+	display: inline-block;
+	width:70px;
+}
+#login dd label.error{
+	width:auto;
+	padding-left: 6px;
 }
 #login form dl dd select{
 	width:159px;
 }
-#login form dl dd.face input[type='button'],#login form dl dd input[type='checkbox']{
+#login form dl dd.face input[type='button']{
 	margin:5px 0 0 60px;
 }
-#login form dl dd img{
-	display:normal;
-	padding:0 0 0 61px;
+#login form dl dd.code{
+	padding-top:15px;
+}
+#login form dl dd.code img{
+	display:inline-block;
+	padding:0 0 0 74px;
+	width:120px;
+	height: 30px;
+}
+#login form dl dd span{
+	padding-left: 6px;
 }
 #login form dl dd span.change{
-	color:green;
+	display: inline-block;
+	vertical-align: 10px;
 	cursor:pointer;
-	position:absolute;
-	top:10px;
-	left:460px;
+}
+#login dd.hold_mesg{
+	padding-left: 74px;
+	margin-top:10px;
+}
+#login dd.hold_mesg input{
+	width:auto;
+	height: auto;
+	line-height: auto;
+	vertical-align: -2px;
+}
+#login dd.hold_mesg label{
+	width:auto;
+}
+#login dd input.sub{
+	width:200px;
+	height: 36px;
+	line-height: 30px;
+	text-align: center;
+	background: #ec5e72;
+	color: #fff;
+	border:none;
+	font-size: 16px;
+	border-radius: 2px;
+	margin:20px 0 0 74px;
+	cursor:pointer;
+}
+#login dt h2{
+    font-weight: normal;
+    font-size: 26px;
+}
+#login dt p.short_line{
+    width:52px;
+    height: 3px;
+    background: red;
+    margin:10px 0 20px 0;
 }
