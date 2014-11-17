@@ -29,20 +29,20 @@
 	margin:0 0 10px 0;
 }
 #sidebar ul li{
-	height:20px;
-	line-height:20px;
-	background:url(../images/sidebar_line.png) no-repeat left center;
-	padding:0 0 0 25px;
+	height:25px;
+	line-height:25px;
+	background:url(../images/sidebar_line2.jpg) no-repeat left center;
+	padding:0 0 0 28px;
 }
 #sidebar ul li a{
-	height:20px;
-	line-height:20px;
+	height:25px;
+	line-height:25px;
 	display:block;
-	color:#369;
+	color:#333;
 	cursor:pointer;
 }
 #sidebar ul li a:hover{
-	color:#c30;
+	color:red;
 	text-decoration:underline;
 	
 }
