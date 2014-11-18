@@ -1,17 +1,23 @@
 <div id="header">
-	<h1><a href="./">爱花花</a></h1>
+	<span class="tel"><em class="tel_ico"></em>400-878-1619</span>
+	<h1><a href="./"><img src="view/default/images/huahua_logo2.png" alt="花花家LOGO"></a></h1>
 	{if $smarty.cookies.user}
 	<p>
-		您好，{$smarty.cookies.user}，欢迎再次光临，<a href="?a=user">个人中心</a> | <a href="?a=cart">购物车</a> | <a href="?a=user&m=loginOut">退出</a>
+		您好，{$smarty.cookies.user}，<a href="?a=user">个人中心</a> | <a href="?a=cart"><i class="cat"></i>购物袋(<strong>0</strong>)</a> | <a href="?a=user&m=loginOut">退出</a>
 	</p>
-		
-		{else}
-		<p>
-			<a href="?a=user&m=login"><img src="view/default/images/bnt_log.gif"/></a>
-			<a href="?a=user&m=reg"><img src="view/default/images/bnt_reg.gif"/></a>
-		</p>
+	{else}
+	<p>
+		<a href="?a=cart"><i class="cat"></i>购物袋(<strong>0</strong>)</a>
+		<a href="?a=user&m=login">登录</a> | 
+		<a href="?a=user&m=reg">注册</a>
+	</p>
 	{/if}
-	
+	<div class="header_search">
+		<form method="post" name="form" action="?a=list&m=searchGoods">
+			<input type="text" name="content" placeholder=" 快捷搜一搜吧"/>
+			<input type="submit" name="search" value="" />
+		</form>
+	</div>
 </div>
 <div id="nav">
 	<ul>
@@ -30,7 +36,7 @@
 		{/foreach}
 	</ul>
 </div>
-<div id="search">
+<!-- <div id="search">
 	<form method="post" name="form" action="?a=list&m=searchGoods">
 		<select name="way">
 			<option value="nav">按类别</option>
@@ -39,4 +45,4 @@
 		<input type="text" name="content"/>
 		<input type="submit" name="search"/>
 	</form>
-</div>
+</div> -->

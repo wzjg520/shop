@@ -12,8 +12,10 @@ img{
 }
 body{
 	font-size:12px;
-	width:1000px;
+	width:1200px;
 	margin:0 auto;
+	font-family: "Microsoft YaHei","微软雅黑","MicrosoftJhengHei";
+	color:#353535;
 }
 ul{
 	list-style:none;
@@ -32,56 +34,114 @@ span.succ{
 .green{
 	color:green;
 }
+/*头部*/
 #header{
-	height:60px;
-	margin:0 0 10px 0;
+	height: 90px;
+	margin:30px 0;
+	text-align: center;
+	position: relative;
+}
+#header span.tel{
+	display: block;
+	font-size: 24px;
+	color:#353535;
+	position: absolute;
+	top:6px;
+	left: 0;
+}
+#header span.tel em.tel_ico{
+	display: inline-block;
+	margin: 5px 10px 0 0;
+	width:24px;
+	height: 23px;
+	background: url(../images/phone_cat.jpg) no-repeat 0 -30px;
 }
 #header h1{
 	width:200px;
 	height:60px;
-	float:left;
-	background:url(../images/logo.png) no-repeat left center;
-	text-indent:-9999px;
+	margin:0 auto;
 	font-size:12px;
 }
 #header h1 a{
-	width:200px;
-	height:60px;
 	display:block;	
 }
 #header p{
-	float:right;
-	height:60px;
-	padding:10px 0 0 10px;
+	position: absolute;
+	top:0;
+	right:0;
+	line-height: 40px;
 }
 #header p a{
 	display:inline-block;
+	padding:0 4px;
+	color:#353535;
 }
+#header p a i.cat{
+	display: inline-block;
+	width:24px;
+	height: 27px;
+	vertical-align: -6px;
+	background: url(../images/phone_cat.jpg) no-repeat -1px 0;
+}
+#header p strong{
+	color: #ff0000;
+	font-style: normal;
+}
+#header .header_search{
+	position: absolute;
+	bottom:-10px;
+	right:0;
+}
+#header .header_search input[type="text"]{
+	border:1px solid #ccc;
+	background: #fff;
+	border-radius: 4px;
+	width:250px;
+	height: 16px;
+	padding:6px;
+	padding-left: 4px;
+}
+#header .header_search input[type="text"]:focus{
+	border:1px solid #353535;
+}
+#header .header_search input[type="submit"]{
+	width:28px;
+	height: 28px;
+	border:none;
+	background: url(../images/search_zoom.png) no-repeat left center;
+	position: absolute;
+	top:0;
+	right:0;
+	cursor:pointer;
+}
+/*导航*/
 #nav{
-	height:26px;
-	padding:0 0 0 30px;
+	height:40px;
 }
 #nav ul{
-	height:26px;
+	height:40px;
 }
 #nav ul li{
-	height:26px;
-	width:82px;
+	height:40px;
+	width:100px;
 	float:left;
 	display:block;
 }
 #nav ul li a{
-	height:26px;
-	line-height:26px;
-	width:78px;
+	height:40px;
+	line-height:40px;
+	width:80px;
 	display:block;
 	text-align:center;
-	background:url(../images/nav_bg.png) no-repeat left center;
+	color:#353535;
+	font-size: 14px;
 }
 #nav ul li a:hover,#nav ul li a.selected{
-	background:url(../images/nav_bg.png) no-repeat right center;
+	background:#353535;
 	color:#fff;
+	border-radius:2px;
 }
+
 #search {
 	height:36px;
 	border:1px solid #5CB4E6;
