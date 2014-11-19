@@ -25,6 +25,11 @@
 		height: 400px;
 		position: absolute;
 		top:0;
+<<<<<<< HEAD
+=======
+		min-width: 2100px;
+		left:-450px;
+>>>>>>> 74603ba44e43fc5e62fd1d4d5286fe2584223292
 	}
 	#banner a{
 		display: block;
@@ -101,6 +106,7 @@
 </style>
 <script>
 $(function(){
+	console.log(json)
 	//轮播器初始化
 	$('.wrap ul li').eq(1).css('color', 'red');
 	$('.wrap strong').html($('#banner img').eq(1).attr('alt'));
@@ -119,7 +125,11 @@ $(function(){
 	
 	
 	//自动轮播器
+<<<<<<< HEAD
 	var banner_timer = setInterval(banner_fn, 2000);
+=======
+	var banner_timer = setInterval(banner, 1000);
+>>>>>>> 74603ba44e43fc5e62fd1d4d5286fe2584223292
 	
 	//手动轮播器
 	// $('#banner ul li').hover(function () {
@@ -131,6 +141,7 @@ $(function(){
 	// 	banner_index = $(this).index() + 1;
 	// 	banner_timer = setInterval(banner_fn, 3000);
 	// });
+<<<<<<< HEAD
 	
 	function banner(obj, prev) {
 		$('.wrap ul li').css('color', '#333');
@@ -145,8 +156,33 @@ $(function(){
 			var firstA=$('#banner').find('a').first().clone();
 			$('#banner').find('a').first().remove();
 			$('#banner').append(firstA)
-		}
+=======
+	var step=0;
+	window.left=true;
+	window.right=false;
+	function banner() {
+		var index=step%4
+		step +=1 
+		$('#banner').width(parseInt($('#banner').width()+700))
+		
+		
+		if(window.right){
+			console.log($('#banner').position().left);
+			$('#banner').prepend('<a href="#"><img src="'+json[index]['src']+'" alt="第三张"></a>');
+			$('#banner').stop().animate({
+				left : $('#banner').position().left
+			}).width(parseInt($('#banner').width()+700))
+		}else if(window.left){
+			$('#banner').append('<a href="#"><img src="'+json[index]['src']+'" alt="第三张"></a>');
+			$('#banner').stop().animate({
+				left : -700+$('#banner').position().left
+			}).width(parseInt($('#banner').width())+700)
 
+>>>>>>> 74603ba44e43fc5e62fd1d4d5286fe2584223292
+		}
+		
+
+<<<<<<< HEAD
 	}
 	
 	function banner_fn() {
@@ -154,8 +190,57 @@ $(function(){
 		banner($('.wrap ul li').eq(banner_index).get(0), banner_index++);
 		
 	}
-})
+=======
 
+		var left_w=parseInt($('#banner').css('left'));
+		
+		
+	}
+
+	$('.right').click(function(){
+		window.right=true
+		window.left=false
+	})
+	$('.left').click(function(){
+		window.left=true
+		window.right=false
+	})
+	//获取当前节点的下一个元素节点
+	// Base.prototype.next = function () {
+	// 	for (var i = 0; i < this.elements.length; i ++) {
+	// 		this.elements[i] = this.elements[i].nextSibling;
+	// 		if (this.elements[i] == null) throw new Error('找不到下一个同级元素节点！');
+	// 		if (this.elements[i].nodeType == 3) this.next();
+	// 	}
+	// 	return this;
+	// };
+
+
+	// Base.prototype.prev = function () {
+	// 	for (var i = 0; i < this.elements.length; i ++) {
+	// 		this.elements[i] = this.elements[i].previousSibling;
+	// 		if (this.elements[i] == null) throw new Error('找不到上一个同级元素节点！');
+	// 		if (this.elements[i].nodeType == 3) this.prev();
+	// 	}
+	// 	return this;
+	// };
+>>>>>>> 74603ba44e43fc5e62fd1d4d5286fe2584223292
+})
+var json=[
+	{
+		'src':'http://gtms04.alicdn.com/tps/i4/TB1M3_9GXXXXXa3XVXXvKyzTVXX-520-280.jpg'
+	},
+	{
+		'src':'http://i.mmcdn.cn/simba/img/TB1TqIRGXXXXXXLXXXXSutbFXXX.jpg'
+	},
+	{
+		'src':'http://i.mmcdn.cn/simba/img/TB1odoWGXXXXXcPXXXXSutbFXXX.jpg'
+	},
+	{
+		'src':'//gtms04.alicdn.com/tps/i4/TB1AAODGXXXXXc7aXXXvKyzTVXX-520-280.jpg'
+	},
+
+]
 </script>
 </head>
 <body>
@@ -164,8 +249,12 @@ $(function(){
 	   		<a href="#"><img src="http://gtms04.alicdn.com/tps/i4/TB1M3_9GXXXXXa3XVXXvKyzTVXX-520-280.jpg" alt="第一张"></a>
 		   	<a href="#"><img src="http://i.mmcdn.cn/simba/img/TB1TqIRGXXXXXXLXXXXSutbFXXX.jpg" alt="第二张"></a>
 		   	<a href="#"><img src="http://i.mmcdn.cn/simba/img/TB1odoWGXXXXXcPXXXXSutbFXXX.jpg" alt="第三张"></a>
+<<<<<<< HEAD
 		   	<a href="#"><img src="http://gtms04.alicdn.com/tps/i4/TB1AAODGXXXXXc7aXXXvKyzTVXX-520-280.jpg" alt="第四张"></a>
 		   	<a href="#"><img src="http://gtms04.alicdn.com/tps/i4/TB1M3_9GXXXXXa3XVXXvKyzTVXX-520-280.jpg" alt="第五张"></a>
+=======
+<!-- 		   	<a href="#"><img src="http://i.mmcdn.cn/simba/img/TB1odoWGXXXXXcPXXXXSutbFXXX.jpg" alt="第三张"></a> -->
+>>>>>>> 74603ba44e43fc5e62fd1d4d5286fe2584223292
 	   </div>
 	   <span class="left_trant"></span>
 	   	<span class="right_trant"></span>
