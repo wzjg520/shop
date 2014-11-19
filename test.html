@@ -14,7 +14,7 @@
 		margin:0;
 	}
 	.wrap{
-		width:1200px;
+		width:100%;
 		height: 430px;
 		margin:20px auto;
 		border:1px solid #ccc;
@@ -22,11 +22,9 @@
 		position: relative;
 	}
 	#banner{
-		width:3500px;
 		height: 400px;
 		position: absolute;
 		top:0;
-		left:-450px;
 	}
 	#banner a{
 		display: block;
@@ -38,7 +36,6 @@
 	}
 	.wrap .left_trant{
 		display: block;
-		width:250px;
 		height: 400px;
 		background: red;
 		opacity: 0.5;
@@ -48,7 +45,6 @@
 	}
 	.wrap .right_trant{
 		display: block;
-		width:250px;
 		height: 400px;
 		position:absolute; 
 		right:0;
@@ -111,9 +107,19 @@ $(function(){
 	
 	//轮播器计数器
 	var banner_index = 2;
+	var banner_nums=$('#banner a').length;
+	var banner_imgW=$('#banner').find('a').eq(0).find('img').width();
+	$('#banner').css('width',banner_imgW*banner_nums)
+
+	var wrap_w=$('.wrap').width();
+	
+	var cha=(banner_imgW*3-wrap_w)/2;
+	$('.wrap').find('span').css('width',banner_imgW-cha);
+	$('#banner').css('left',-cha)
+	
 	
 	//自动轮播器
-	var banner_timer = setInterval(banner_fn, 1000);
+	var banner_timer = setInterval(banner_fn, 2000);
 	
 	//手动轮播器
 	// $('#banner ul li').hover(function () {
@@ -131,41 +137,23 @@ $(function(){
 		$(obj).css('color', 'red');
 		$('.wrap strong').html($('#banner img').eq($(obj).index()).attr('alt'));
 		$('#banner').stop().animate({
-			left : -700*(prev)-450
+			left : -banner_imgW*(prev)-cha
 		});
 		var left_w=parseInt($('#banner').css('left'));
-		if(left_w==-1850){
-			alert('要开始添加了')
+		var target=parseInt(cha+(banner_nums-3)*banner_imgW);
+		if(left_w==-target){
+			var firstA=$('#banner').find('a').first().clone();
+			$('#banner').find('a').first().remove();
+			$('#banner').append(firstA)
 		}
 
 	}
 	
 	function banner_fn() {
-		if (banner_index >= $('.wrap ul li').length) banner_index = 0;
-		banner($('.wrap ul li').eq(banner_index).get(0), banner_index == 0 ? $('.wrap ul li').length - 1 : banner_index - 1);
-		banner_index++;
-		console.log(banner_index)
+		// if (banner_index >= banner_nums) banner_index = 0;
+		banner($('.wrap ul li').eq(banner_index).get(0), banner_index++);
+		
 	}
-
-	//获取当前节点的下一个元素节点
-	// Base.prototype.next = function () {
-	// 	for (var i = 0; i < this.elements.length; i ++) {
-	// 		this.elements[i] = this.elements[i].nextSibling;
-	// 		if (this.elements[i] == null) throw new Error('找不到下一个同级元素节点！');
-	// 		if (this.elements[i].nodeType == 3) this.next();
-	// 	}
-	// 	return this;
-	// };
-
-
-	// Base.prototype.prev = function () {
-	// 	for (var i = 0; i < this.elements.length; i ++) {
-	// 		this.elements[i] = this.elements[i].previousSibling;
-	// 		if (this.elements[i] == null) throw new Error('找不到上一个同级元素节点！');
-	// 		if (this.elements[i].nodeType == 3) this.prev();
-	// 	}
-	// 	return this;
-	// };
 })
 
 </script>
@@ -176,8 +164,8 @@ $(function(){
 	   		<a href="#"><img src="http://gtms04.alicdn.com/tps/i4/TB1M3_9GXXXXXa3XVXXvKyzTVXX-520-280.jpg" alt="第一张"></a>
 		   	<a href="#"><img src="http://i.mmcdn.cn/simba/img/TB1TqIRGXXXXXXLXXXXSutbFXXX.jpg" alt="第二张"></a>
 		   	<a href="#"><img src="http://i.mmcdn.cn/simba/img/TB1odoWGXXXXXcPXXXXSutbFXXX.jpg" alt="第三张"></a>
-		   	<a href="#"><img src="http://gtms04.alicdn.com/tps/i4/TB1AAODGXXXXXc7aXXXvKyzTVXX-520-280.jpg" alt="第三张"></a>
-		   	<a href="#"><img src="http://gtms04.alicdn.com/tps/i4/TB1M3_9GXXXXXa3XVXXvKyzTVXX-520-280.jpg" alt="第三张"></a>
+		   	<a href="#"><img src="http://gtms04.alicdn.com/tps/i4/TB1AAODGXXXXXc7aXXXvKyzTVXX-520-280.jpg" alt="第四张"></a>
+		   	<a href="#"><img src="http://gtms04.alicdn.com/tps/i4/TB1M3_9GXXXXXa3XVXXvKyzTVXX-520-280.jpg" alt="第五张"></a>
 	   </div>
 	   <span class="left_trant"></span>
 	   	<span class="right_trant"></span>
