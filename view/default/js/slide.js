@@ -51,7 +51,7 @@
             var t;
             $('.pattern').empty().append('<div class="masking"></div>');
             $('.subpattern').empty().append('<div class="masking"></div>');
-            $('.masking').css('width', ($(document.body).width() - 960) / 2);
+            $('.masking').css('width', ($(document.body).width() - 1200) / 2);
             if (dir > 0) {
                 t = cur + 1;
                 if (t > max && !slast) {
@@ -95,7 +95,7 @@
             var idx_i = ($(this).data('idx'));
             $('.pattern').empty().append('<div class="masking"></div>');
             $('.subpattern').empty().append('<div class="masking"></div>');
-            $('.masking').css('width', ($(document.body).width() - 960) / 2);
+            $('.masking').css('width', ($(document.body).width() - 1200) / 2);
             dgo(idx_i, function() {
                 if (idx_i == 0) {
                     p.children().eq(n - 1).clone().appendTo('.pattern');
@@ -145,7 +145,7 @@
                 }, 30000);
             })
         }
-        var min_w = 960;
+        var min_w = 1200;
         var wid = $(window).width() - 2;
         if (wid < min_w) {
             wid = min_w;
@@ -164,7 +164,7 @@
         $('.btns li').eq(0).addClass('on');
     });
     $(window).bind('resize', function() {
-        var min_w = 960;
+        var min_w = 1200;
         var wid = $(window).width() - 2;
         if (wid < min_w) {
             wid = min_w;
