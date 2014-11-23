@@ -16,10 +16,10 @@
 <div class="scroll-box" id="HP_carousel" rel="auto-play">
     <div class="img">
         <div class="slider" id="hp_images">
-            <a href="#"><img src="view/default/images/four.jpg" /></a>
-            <a href="#"><img src="view/default/images/two.jpg" /></a>
-            <a href="#"><img src="view/default/images/three.jpg" /></a>
-            <a href="#"><img src="view/default/images/one.jpg" /></a>
+            <a href="#"><img src="view/default/images/four1.jpg" /></a>
+            <a href="#"><img src="view/default/images/two1.jpg" /></a>
+            <a href="#"><img src="view/default/images/three1.jpg" /></a>
+            <a href="#"><img src="view/default/images/one1.jpg" /></a>
         </div>
         <div class="paging pattern"></div>
         <div class="paging subpattern"></div>

@@ -193,13 +193,13 @@ p.clear{
     background-repeat: no-repeat;
 }
 .scroll-box {
-    height: 400px;
+    height: 530px;
     margin: 0 auto 40px;
     position: relative;
     width: 1438px;
 }
 .scroll-box .img {
-    height: 400px;
+    height: 530px;
     overflow: hidden;
     position: absolute;
     width: 1438px;
@@ -211,7 +211,7 @@ p.clear{
 }
 .scroll-box .paging {
     background-color: #fff;
-    height: 400px;
+    height: 530px;
     opacity: 0.8;
     overflow: hidden;
     position: absolute;
@@ -219,7 +219,7 @@ p.clear{
 }
 .scroll-box .paging .masking {
     display: block;
-    height: 400px;
+    height: 530px;
     opacity: 0.8;
     position: absolute;
 }
@@ -228,7 +228,7 @@ p.clear{
 }
 .scroll-box .btns {
     position: absolute;
-    width: 960px;
+    width: 1200px;
     z-index: 10;
 }
 .scroll-box .btns .icon {
@@ -237,7 +237,7 @@ p.clear{
     height: 53px;
     overflow: hidden;
     position: absolute;
-    top: 174px;
+    top: 238px;
     width: 53px;
     z-index: 2999;
 }
@@ -263,7 +263,7 @@ p.clear{
     left: 50%;
     overflow: hidden;
     position: absolute;
-    top: 410px;
+    top: 545px;
     width: 100px;
 }
 .scroll-box .btns .switcher li {
@@ -283,20 +283,20 @@ p.clear{
 
 
 #HP_carousel {
-    height: 400px;
+    height: 530px;
     margin: 0 auto 40px;
     position: relative;
-    width: 960px;
+    width: 1200px;
 }
 #HP_carousel a {
     display: inline;
     float: left;
 }
 #HP_carousel .img {
-    height: 400px;
+    height: 530px;
     overflow: hidden;
     position: absolute;
-    width: 960px;
+    width: 1200px;
 }
 #HP_carousel .img span {
     display: block;
@@ -305,7 +305,7 @@ p.clear{
 }
 #HP_carousel .btns {
     position: absolute;
-    width: 960px;
+    width: 1200px;
     z-index: 10;
 }
 #HP_carousel .btns b {
@@ -337,7 +337,7 @@ p.clear{
     height: 53px;
     overflow: hidden;
     position: absolute;
-    top: 174px;
+    top: 238px;
     width: 53px;
     z-index: 2999;
 }
@@ -365,7 +365,7 @@ p.clear{
 #HP_carousel .masking {
     background: #fff;
     display: block;
-    height: 400px;
+    height: 530px;
     opacity: 0.8;
     position: absolute;
 }
