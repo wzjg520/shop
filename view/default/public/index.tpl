@@ -6,11 +6,26 @@
 <link rel="stylesheet" href="view/default/style/index.css" type="text/css"/>
 <link rel="shortcut icon" type="image/x-icon" href="view/default/images/icon.ico"/>
 <script type="text/javascript" src="view/default/js/jquery.js"></script>
+<script src="view/default/js/slide.js"></script>
 <script type="text/javascript" src="view/default/js/index.js"></script>
 <title>ihuahua.cc在线商城</title>
 </head>
 <body>
 {include file='default/public/header.tpl'}
+<!-- 轮播图 -->
+<div class="scroll-box" id="HP_carousel" rel="auto-play">
+    <div class="img">
+        <div class="slider" id="hp_images">
+            <a href="#"><img src="view/default/images/four.jpg" /></a>
+            <a href="#"><img src="view/default/images/two.jpg" /></a>
+            <a href="#"><img src="view/default/images/three.jpg" /></a>
+            <a href="#"><img src="view/default/images/one.jpg" /></a>
+        </div>
+        <div class="paging pattern"></div>
+        <div class="paging subpattern"></div>
+    </div>
+</div>
+
 <div id="sidebar">
 	<h2>商城公告</h2>
 	<div class="box">
