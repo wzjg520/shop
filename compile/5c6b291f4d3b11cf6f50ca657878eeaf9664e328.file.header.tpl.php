@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2014-11-18 20:53:25
+<?php /* Smarty version Smarty-3.1.17, created on 2014-11-23 13:27:49
          compiled from "/home/wwwroot/myweb.com/shop/view/default/public/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1208859680542f7764ec9895-87652114%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5c6b291f4d3b11cf6f50ca657878eeaf9664e328' => 
     array (
       0 => '/home/wwwroot/myweb.com/shop/view/default/public/header.tpl',
-      1 => 1416315074,
+      1 => 1416720350,
       2 => 'file',
     ),
   ),
@@ -83,4 +83,5 @@ $_smarty_tpl->tpl_vars['value']->_loop = true;
 		<input type="text" name="content"/>
 		<input type="submit" name="search"/>
 	</form>
-</div> --><?php }} ?>
+</div> -->
+<?php }} ?>

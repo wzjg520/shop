@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2014-11-16 18:06:16
+<?php /* Smarty version Smarty-3.1.17, created on 2014-11-23 13:27:49
          compiled from "/home/wwwroot/myweb.com/shop/view/default/public/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:80830780542f7764e0e769-62769126%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '94da9477236ca3e23b0ba61265aa820375eab6e2' => 
     array (
       0 => '/home/wwwroot/myweb.com/shop/view/default/public/index.tpl',
-      1 => 1416128931,
+      1 => 1416720350,
       2 => 'file',
     ),
   ),
@@ -38,11 +38,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <link rel="stylesheet" href="view/default/style/index.css" type="text/css"/>
 <link rel="shortcut icon" type="image/x-icon" href="view/default/images/icon.ico"/>
 <script type="text/javascript" src="view/default/js/jquery.js"></script>
+<script src="view/default/js/slide.js"></script>
 <script type="text/javascript" src="view/default/js/index.js"></script>
 <title>ihuahua.cc在线商城</title>
 </head>
 <body>
 <?php echo $_smarty_tpl->getSubTemplate ('default/public/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<!-- 轮播图 -->
+<div class="scroll-box" id="HP_carousel" rel="auto-play">
+    <div class="img">
+        <div class="slider" id="hp_images">
+            <a href="#"><img src="view/default/images/four.jpg" /></a>
+            <a href="#"><img src="view/default/images/two.jpg" /></a>
+            <a href="#"><img src="view/default/images/three.jpg" /></a>
+            <a href="#"><img src="view/default/images/one.jpg" /></a>
+        </div>
+        <div class="paging pattern"></div>
+        <div class="paging subpattern"></div>
+    </div>
+</div>
 
 <div id="sidebar">
 	<h2>商城公告</h2>
