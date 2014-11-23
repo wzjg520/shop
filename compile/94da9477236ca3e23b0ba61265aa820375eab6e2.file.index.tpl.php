@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2014-10-04 12:28:20
+<?php /* Smarty version Smarty-3.1.17, created on 2014-11-16 18:06:16
          compiled from "/home/wwwroot/myweb.com/shop/view/default/public/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:80830780542f7764e0e769-62769126%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '94da9477236ca3e23b0ba61265aa820375eab6e2' => 
     array (
       0 => '/home/wwwroot/myweb.com/shop/view/default/public/index.tpl',
-      1 => 1403500218,
+      1 => 1416128931,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.17',
+  'unifunc' => 'content_542f7764ec6ab0_64596215',
   'variables' => 
   array (
     'cartGoodsCount' => 0,
@@ -27,8 +29,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'allBrand' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_542f7764ec6ab0_64596215',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_542f7764ec6ab0_64596215')) {function content_542f7764ec6ab0_64596215($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

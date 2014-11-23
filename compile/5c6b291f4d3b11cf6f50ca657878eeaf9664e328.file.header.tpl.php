@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.17, created on 2014-10-04 12:28:20
+<?php /* Smarty version Smarty-3.1.17, created on 2014-11-18 20:53:25
          compiled from "/home/wwwroot/myweb.com/shop/view/default/public/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1208859680542f7764ec9895-87652114%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5c6b291f4d3b11cf6f50ca657878eeaf9664e328' => 
     array (
       0 => '/home/wwwroot/myweb.com/shop/view/default/public/header.tpl',
-      1 => 1403347944,
+      1 => 1416315074,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.17',
+  'unifunc' => 'content_542f7764ee2065_71270541',
   'variables' => 
   array (
     'frontTenNav' => 0,
@@ -22,24 +24,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'value' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.17',
-  'unifunc' => 'content_542f7764ee2065_71270541',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_542f7764ee2065_71270541')) {function content_542f7764ee2065_71270541($_smarty_tpl) {?><div id="header">
-	<h1><a href="./">爱花花</a></h1>
+	<span class="tel"><em class="tel_ico"></em>400-878-1619</span>
+	<h1><a href="./"><img src="view/default/images/huahua_logo2.png" alt="花花家LOGO"></a></h1>
 	<?php if ($_COOKIE['user']) {?>
 	<p>
 		您好，<?php echo $_COOKIE['user'];?>
-，欢迎再次光临，<a href="?a=user">个人中心</a> | <a href="?a=cart">购物车</a> | <a href="?a=user&m=loginOut">退出</a>
+，<a href="?a=user">个人中心</a> | <a href="?a=cart"><i class="cat"></i>购物袋(<strong>0</strong>)</a> | <a href="?a=user&m=loginOut">退出</a>
 	</p>
-		
-		<?php } else { ?>
-		<p>
-			<a href="?a=user&m=login"><img src="view/default/images/bnt_log.gif"/></a>
-			<a href="?a=user&m=reg"><img src="view/default/images/bnt_reg.gif"/></a>
-		</p>
+	<?php } else { ?>
+	<p>
+		<a href="?a=cart"><i class="cat"></i>购物袋(<strong>0</strong>)</a>
+		<a href="?a=user&m=login">登录</a> | 
+		<a href="?a=user&m=reg">注册</a>
+	</p>
 	<?php }?>
-	
+	<div class="header_search">
+		<form method="post" name="form" action="?a=list&m=searchGoods">
+			<input type="text" name="content" placeholder=" 快捷搜一搜吧"/>
+			<input type="submit" name="search" value="" />
+		</form>
+	</div>
 </div>
 <div id="nav">
 	<ul>
@@ -68,7 +74,7 @@ $_smarty_tpl->tpl_vars['value']->_loop = true;
 		<?php } ?>
 	</ul>
 </div>
-<div id="search">
+<!-- <div id="search">
 	<form method="post" name="form" action="?a=list&m=searchGoods">
 		<select name="way">
 			<option value="nav">按类别</option>
@@ -77,4 +83,4 @@ $_smarty_tpl->tpl_vars['value']->_loop = true;
 		<input type="text" name="content"/>
 		<input type="submit" name="search"/>
 	</form>
-</div><?php }} ?>
+</div> --><?php }} ?>
