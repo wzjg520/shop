@@ -12,7 +12,7 @@ img{
 }
 body{
 	font-size:12px;
-	width:1200px;
+	width:100%;
 	margin:0 auto;
 	font-family: "Microsoft YaHei","微软雅黑","MicrosoftJhengHei";
 	color:#353535;
@@ -36,8 +36,9 @@ span.succ{
 }
 /*头部*/
 #header{
+	width:1200px;
 	height: 90px;
-	margin:30px 0;
+	margin:30px auto;
 	text-align: center;
 	position: relative;
 }
@@ -116,6 +117,8 @@ span.succ{
 }
 /*导航*/
 #nav{
+	width:1200px;
+	margin:0 auto 10px;
 	height:40px;
 }
 #nav ul{
