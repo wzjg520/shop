@@ -118,7 +118,4 @@ $(function(){
 		// $(this).css('boxShadow','none');
 	})
 
-	$('#test').mouseleave(function(e) {
-		console.log(e.pageX+'+'+e.pageY)
-	});
 });	
