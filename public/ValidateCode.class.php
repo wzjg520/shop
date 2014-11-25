@@ -30,7 +30,7 @@ class ValidateCode{
 	}
 	//生成图像背景
 	public function createBg(){
-		$this->img=imagecreatefrompng(ROOT_PATH.'/view/default/images/bg_code'.mt_rand(1, 3).'.png');
+return		$this->img=imagecreatefrompng(ROOT_PATH.'/view/default/images/bg_code'.mt_rand(1, 3).'.png');
 		
 	}
 	//生成文字图形
@@ -43,7 +43,7 @@ class ValidateCode{
 	}
 	//输出图片
 	public function outPut(){
-		header('Content-type:image/png');
+		header('Content-type: image/png'); 
 		imagepng($this->img);
 		imagedestroy($this->img);
 	}
