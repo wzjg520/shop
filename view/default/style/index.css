@@ -1,4 +1,10 @@
 @CHARSET "UTF-8";
+#test{
+    width:400px;
+    height: 400px;
+    border:2px solid #555;
+    margin:200px;
+}
 #sidebar{
 	width:200px;
 	height:600px;
@@ -60,7 +66,7 @@
 #sidebar dl dd.title a:hover{
 	text-decoration:underline;
 }
-#main {
+/*#main {
 	float:right;
 	margin:10px 0 0 0;
 	width:785px;
@@ -132,7 +138,7 @@
 #main div.brand ul li a:hover{
 	background:lightgreen;
 	color:#FFF;
-}
+}*/
 p.clear{
 	clear:both;
 }
@@ -187,7 +193,8 @@ p.clear{
 	color:#fff;
 	z-index:4;
 }
-/*打的轮播图*/
+/*huahua*/
+/*大的轮播图*/
 #HP_carousel .icon, .scroll-box .btns .switcher li {
     background-image: url("http://ostatic.theoutnet.cn/skin/frontend/shouke/cosmo_ton/css/img/logo.png");
     background-repeat: no-repeat;
@@ -371,4 +378,173 @@ p.clear{
 }
 #HP_carousel .btns span {
     display: block;
+}
+/*销售排行*/
+#sale_num{
+    width:1200px;
+    margin:0 auto;
+    overflow: hidden;
+}
+#sale_num h2{
+    font-weight: normal;
+    font-size: 26px;
+}
+#sale_num p.short_line{
+    width:52px;
+    height: 3px;
+    background: red;
+    margin:10px 0 20px 0;
+}
+#sale_num .box ul{
+    overflow: hidden;
+}
+#sale_num .box li{
+    width:220px;
+    margin:10px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+#sale_num li img{
+    width:220px;
+    height: 280px;
+}
+#sale_num li .bg_hover{
+    position: absolute;
+    width:220px;
+    height: 280px;
+    background:rgba(53, 53, 53, 0.7)!important;
+    background:#353535; 
+    filter:Alpha(opacity=70);/*　使用IE专属滤镜实现IE背景透明*/
+    top:280px;
+    left:0px;
+}
+#sale_num li .bg_hover p{
+    color: #f2f2f2;
+    font-size: 14px;
+    line-height: 38px;
+    text-align: center;
+}
+#sale_num li .bg_hover p.see{
+    background: #ec5e72;
+    width:108px;
+    line-height: 38px;
+    text-align: center;
+    color:#f2f2f2;
+    margin:0 auto;
+    cursor:pointer;
+}
+#sale_num li .bg_hover p.price{
+    color: #f2f2f2;
+    margin-top:80px;
+    font-size: 18px;
+}
+#sale_num li .bg_hover p a{
+    color: #fff;
+}
+/*换了促销和店家推荐*/
+#main{
+    width:1200px;
+    margin:0 auto;
+}
+#main h2{
+    font-weight: normal;
+    font-size: 26px;
+    margin-top:14px;
+}
+#main p.short_line{
+    width:52px;
+    height: 3px;
+    background: red;
+    margin:10px 0 20px 0;
+}
+#main div.pro_list{
+    margin-left:-20px;
+    width:1220px;
+}
+#main dl {
+    width:260px;
+    padding:10px;
+    display:inline-block;
+    border:1px solid #ddd;
+    margin:0 0 20px 20px;
+}   
+#main dl dt{
+    width:260px;
+}
+#main dl dt img{
+    width:260px;
+}
+#main dl:hover{
+    border:1px solid #777;
+}
+#main dl dd{
+    padding:5px 0;
+}
+#main dl dd strong{
+    font-size:16px;
+    font-family:Tahoma;
+    color:red;
+}   
+#main dl dd del{
+    color:#999;
+}  
+#main dl dd.price strong{
+    color:#555;
+} 
+#main dl dd.title a{
+    font-size:14px;
+    color:#555;
+}
+#main dl dd.commend a{
+    color: #555;
+} 
+#main dl dd.buy a{
+    color: #555;
+} 
+#main dd.buy .now_buy{
+    display: inline-block;
+    margin-left: 10px;
+    width:80px;
+    height: 34px;
+    line-height: 34px;
+    background: #ec5e72;
+    text-align: center;
+}
+#main dd.buy .now_buy a{
+    color: #f2f2f2;
+}
+#main dl dd.title a:hover{
+    text-decoration:underline;
+}
+/*品牌联盟*/
+#main div.brand{
+    width:1200px;
+    margin:0 auto;
+}
+#main div.brand ul{
+    float: left;
+    height: 100px
+}
+#main div.brand ul li{
+    width:100px;
+    height: 100px;
+    float: left; 
+    background: #fff;
+    margin-right:5px; 
+    position: relative;
+}
+#main div.brand ul li img{
+    width:100px;
+    position: absolute;
+    left:0;
+    z-index: 10;
+    border:1px solid #ddd;
+    background: #fff;
+    padding:10px;
+}
+#main div.brand ul li a{
+    display: block;
+    color: #fff;
+
 }

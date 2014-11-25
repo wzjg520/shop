@@ -55,4 +55,70 @@ $(function(){
 		banner($('#banner ul li').get(banner_index),banner_index==0 ? $('#banner ul li').length-1 : banner_index-1);
 		banner_index++;
 	}
+	// 销售排行
+	$('#sale_num').find('li').mouseover(function(e){
+		$(this).find('.bg_hover').css({
+			'left':'0px',
+			'top':'0px',
+			'transition': 'all 300ms ease 0s'
+		});
+	})
+
+	$('#sale_num').find('li').mouseleave(function(e) {
+		if(e.pageY<$(this).offset().top){
+			$(this).find('.bg_hover').css({
+				'left':'0px',
+				'top':'-280px',
+				'transition': 'all 300ms ease 0s'
+			});
+		}else if(e.pageX<$(this).offset().left && e.pageY>$(this).offset().top && e.pageY<$(this).offset().top+300 ){
+			$(this).find('.bg_hover').css({
+				'left':'-220px',
+				'transition': 'all 300ms ease 0s'
+			});
+		}else if(e.pageX>$(this).offset().left && e.pageY>$(this).offset().top && e.pageY<$(this).offset().top+300){
+			$(this).find('.bg_hover').css({
+				'left':'220px',
+				'transition': 'all 300ms ease 0s'
+			});
+		}else if(e.pageY>$(this).offset().top){
+			$(this).find('.bg_hover').css({
+				'left':'0px',
+				'top':'280px',
+				'transition': 'all 300ms ease 0s'
+			});
+		}
+		
+	});
+	// 品牌联盟
+	$('.brand').find('li').each(function(i){
+		$(this).find('img').css('top',parseInt((80-$(this).find('img').height())/2))                      
+    })
+	$('.brand').find('li').hover(function(){
+		var top_height=parseInt($(this).find('img').css('top'));
+		$(this).find('img').stop().animate({
+			width:120,
+			top:top_height+10,
+			left:-10,
+		}).css({
+			'zIndex':11,
+			'boxShadow':'0 0 3px #000'
+		})
+		// $(this).css('boxShadow','0 0 3px #000');
+	},function(){
+		var top_height=parseInt($(this).find('img').css('top'));
+		$(this).find('img').stop().animate({
+			width:100,
+			top:top_height-10,
+			left:0
+		}).css({
+			'zIndex':10,
+			'boxShadow':'none'
+		})
+		// $(this).css('boxShadow','none');
+	})
+
+	$('#test').mouseleave(function(e) {
+		console.log(e.pageX+'+'+e.pageY)
+	});
 });	

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 define('FRONT_STYLE', 'default/');
 define('ADMIN_STYLE','admin/');
 define('SMARTY_SETCACHEDIR',ROOT_PATH.'/cache/');
