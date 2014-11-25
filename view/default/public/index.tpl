@@ -91,7 +91,7 @@
 		</ul>
 	</div>	
 </div>
-<div id="test">huahua</div>
+
 
 <!-- <div id="sidebar">
 	<h2>商城公告</h2>
