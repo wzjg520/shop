@@ -71,17 +71,17 @@ $(function(){
 				'top':'-280px',
 				'transition': 'all 300ms ease 0s'
 			});
-		}else if(e.pageX<$(this).offset().left && e.pageY>$(this).offset().top && e.pageY<$(this).offset().top+300 ){
+		}else if(e.pageX<$(this).offset().left && e.pageY>$(this).offset().top && e.pageY<$(this).offset().top+280 ){
 			$(this).find('.bg_hover').css({
 				'left':'-220px',
 				'transition': 'all 300ms ease 0s'
 			});
-		}else if(e.pageX>$(this).offset().left && e.pageY>$(this).offset().top && e.pageY<$(this).offset().top+300){
+		}else if(e.pageX>$(this).offset().left && e.pageY>$(this).offset().top && e.pageY<$(this).offset().top+280){
 			$(this).find('.bg_hover').css({
 				'left':'220px',
 				'transition': 'all 300ms ease 0s'
 			});
-		}else if(e.pageY>$(this).offset().top){
+		}else if(e.pageY>$(this).offset().top+280){
 			$(this).find('.bg_hover').css({
 				'left':'0px',
 				'top':'280px',
