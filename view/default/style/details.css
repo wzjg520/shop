@@ -9,6 +9,7 @@
 #main dl.pic dt{
 	width:304px;
 	height:304px;
+	position: relative;
 }
 #main dl.pic dt img{
 	margin:2px auto;
@@ -29,6 +30,23 @@
 	width:500px;
 	float:left;
 	padding:10px 0 0 20px;
+	position: relative;
+}
+#main dl.text dt{
+	width:380px;
+	height: 377px;	
+	position: absolute;
+	top:0;
+	left: 0;
+	overflow: hidden;
+	border:1px solid #777;
+}
+#main dl.text dt img{
+	width:800px;
+	height: 800px;
+	position: absolute;
+	top:0;
+	left: 0;
 }	
 #main dl.text dd{
 	padding:6px;
@@ -155,4 +173,18 @@ div.c table td{
 	border-bottom:1px dashed #ccc;
 
 	padding:20px 0;
+}
+#mask {
+    background: #000;
+    display: none;
+    height: 70px;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 70px;
+    cursor:move;
+}
+#zoomLarge{
+	display: none;
 }
