@@ -5,7 +5,7 @@ $(function(){
 	}
 	$('.channel li').click(function(){
 		$('.channel li').css('background-position','right');
-		var index=$(this).css('background-position','left').index()
+		var index=$(this).css('background-position','right').addClass('selected').siblings('li').removeClass('selected').index()
 		$('.c').css('display','none');
 		$('.c').eq(index).css('display','block');
 	})

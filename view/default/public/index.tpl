@@ -67,16 +67,18 @@
 	</div>
 	<h2>店家推荐</h2>
 	<p class="short_line"></p>
-	<div class="pro_list">
+	<div class="pro_list_two">
 		{foreach from=$recommendGoods key=key item=value}
 		<dl>
 			<dt><a href="?a=details&navid={$value->nav}&goodsid={$value->id}"><img src="{$value->thumb_small}"/></a></dt>
-			<dd class="price"><strong>￥{$value->price_sale}元</strong> <del>￥{$value->price_market}元</del></dd>
-			<dd class="title"><a href="#">{$value->name}</a></dd>
-			<dd class="commend"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}#commend">已有{$value->count}人评价 </a> <span class="green">(销售{$value->sale_count}{$value->unit})</span></dd>
-			<dd class="buy"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}">购买</a> | <a href="?a=user&m=addCollect&id={$value->id}" target="blank">收藏</a> | <a href="?a=compare&m=setCompare&navid={$value->nav}&goodsid={$value->id}" onclick="javascript:return checkCompare('{$value->nav}')" target="blank">比较</a>
-			<span class="now_buy"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}">马上购买</a></span>
-			</dd>			
+			<dd class="title"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}">{$value->name}</a></dd>
+			<div class="covers">
+				<p class="price"><strong>￥{$value->price_sale}元</strong> <del>￥{$value->price_market}元</del></p>
+				<p class="now_buy"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}">马上购买</a></p>
+				<p class="title"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}">{$value->name}</a></p>
+				<p class="commend"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}#commend">已有{$value->count}人评价 </a> <span class="green">(销售{$value->sale_count}{$value->unit})</span></p>
+				<p class="buy"><a href="?a=details&navid={$value->nav}&goodsid={$value->id}">购 买</a> | <a href="?a=user&m=addCollect&id={$value->id}" target="blank">收 藏</a> | <a href="?a=compare&m=setCompare&navid={$value->nav}&goodsid={$value->id}" onclick="javascript:return checkCompare('{$value->nav}')" target="blank">比 较</a></p>
+			</div>			
 		</dl>
 		{/foreach}
 		<div id="page">{$page}</div>

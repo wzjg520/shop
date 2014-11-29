@@ -456,6 +456,7 @@ p.clear{
     margin-left:-20px;
     width:1220px;
 }
+
 #main dl {
     width:260px;
     padding:10px;
@@ -510,35 +511,118 @@ p.clear{
 }
 #main dl dd.title a:hover{
     text-decoration:underline;
+    color: #ec5e72;
+}
+#main div.pro_list_two{
+    width:1200px;
+    margin-left: 2px;
+    overflow: hidden;
+}
+#main div.pro_list_two dl{
+    width:218px;
+    padding:10px;
+    float:left;
+    border:1px solid #ddd;
+    overflow: hidden;
+    position: relative;
+    margin:0;
+    margin-bottom: -1px;
+    margin-right: -1px;
+}
+#main div.pro_list_two dl dd{
+    text-align: center;
+}
+#main div.pro_list_two dt,#main div.pro_list_two dt img{
+    width:218px;
+    height: 218px;
+}
+#main div.pro_list_two dl .covers{
+    width:238px;
+    height: 267px;
+    background:rgba(255, 255, 255, 0.7)!important;
+    background:#fff; 
+    filter:Alpha(opacity=70);/*　使用IE专属滤镜实现IE背景透明*/
+    position: absolute;
+    top:0;
+    left:0;
+    display: none;
+}
+.pro_list_two p{
+    text-align: center;
+    color: #555;
+}
+.pro_list_two p.now_buy{
+    width:150px;
+    height: 34px;
+    line-height: 34px;
+    background: #ec5e72;
+    margin:10px auto;
+}
+.pro_list_two .covers p.now_buy a{
+    color: #f2f2f2;
+    display: block;
+}
+.pro_list_two .covers .title{
+    padding-bottom: 8px;
+}
+.pro_list_two .covers .title a{
+    color: #333;
+    font-size: 14px;
+}
+.pro_list_two .covers .title a:hover{
+    text-decoration: underline;
+}
+.pro_list_two .covers p a{
+    color: #555;
+}
+.pro_list_two .covers p.buy{
+    line-height: 22px;
+}
+.pro_list_two .covers p.commend span.green{
+    color:#333;
+}
+.pro_list_two .price{
+    padding-top:60px;
+}
+.pro_list_two .price strong{
+    color: #000;
+    font-weight: normal;
+    font-size: 18px;
+}
+.pro_list_two .price del{
+    color: #666;
 }
 /*品牌联盟*/
 #main div.brand{
-    width:1200px;
+    width:1180px;
     margin:0 auto;
+    height: 150px;
+    border:1px solid #ddd;
+    padding:5px 0 0 20px;
 }
 #main div.brand ul{
     float: left;
-    height: 100px
+    height: 150px;
 }
 #main div.brand ul li{
-    width:100px;
-    height: 100px;
+    width:120px;
+    height: 50px;
     float: left; 
     background: #fff;
-    margin-right:5px; 
+    margin:0 5px; 
+    margin-bottom: 20px;
     position: relative;
 }
 #main div.brand ul li img{
     width:100px;
     position: absolute;
+    top:0;
     left:0;
     z-index: 10;
-    border:1px solid #ddd;
     background: #fff;
-    padding:10px;
+    padding:15px 5px;
 }
 #main div.brand ul li a{
     display: block;
     color: #fff;
-
 }

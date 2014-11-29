@@ -71,7 +71,7 @@ $(function(){
 				'top':'-280px',
 				'transition': 'all 300ms ease 0s'
 			});
-		}else if(e.pageX<$(this).offset().left && e.pageY>$(this).offset().top && e.pageY<$(this).offset().top+280 ){
+		}else if(e.pageX<=$(this).offset().left && e.pageY>$(this).offset().top && e.pageY<$(this).offset().top+280 ){
 			$(this).find('.bg_hover').css({
 				'left':'-220px',
 				'transition': 'all 300ms ease 0s'
@@ -81,7 +81,7 @@ $(function(){
 				'left':'220px',
 				'transition': 'all 300ms ease 0s'
 			});
-		}else if(e.pageY>$(this).offset().top+280){
+		}else if(e.pageY>=$(this).offset().top+280){
 			$(this).find('.bg_hover').css({
 				'left':'0px',
 				'top':'280px',
@@ -90,32 +90,33 @@ $(function(){
 		}
 		
 	});
+	//店家推荐
+	$('.pro_list_two').find('dl').hover(function(){
+		$(this).find('.covers').stop().show();
+	},function(){
+		$(this).find('.covers').stop().hide();
+	})
 	// 品牌联盟
-	$('.brand').find('li').each(function(i){
-		$(this).find('img').css('top',parseInt((80-$(this).find('img').height())/2))                      
-    })
 	$('.brand').find('li').hover(function(){
 		var top_height=parseInt($(this).find('img').css('top'));
 		$(this).find('img').stop().animate({
 			width:120,
-			top:top_height+10,
+			top:10,
 			left:-10,
 		}).css({
 			'zIndex':11,
 			'boxShadow':'0 0 3px #000'
 		})
-		// $(this).css('boxShadow','0 0 3px #000');
 	},function(){
 		var top_height=parseInt($(this).find('img').css('top'));
 		$(this).find('img').stop().animate({
 			width:100,
-			top:top_height-10,
+			top:0,
 			left:0
 		}).css({
 			'zIndex':10,
 			'boxShadow':'none'
 		})
-		// $(this).css('boxShadow','none');
 	})
 
 });	

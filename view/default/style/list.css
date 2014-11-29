@@ -1,46 +1,48 @@
 @CHARSET "UTF-8";
 #sait{
-	background:url(../images/sait_bg.png) repeat-x;
-	height:36px;
-	line-height:36px;
-	padding:0 0 0 15px;
-	border:1px solid #C5E4FF;
 	border-top:none;
 }
+#shop_main{
+	width:1200px;
+	overflow: hidden;
+	margin:0 auto;
+}
 #sidebar{
-	width:200px;
+	width:280px;
 	float:left;
 	margin:10px 0 0 0;
 }
 #sidebar h2{
 	height:34px;
 	line-height:34px;
-	background:url(../images/h2_bg.png) repeat-x;
+	background:url(../images/h2_bg2.png)no-repeat 10px center;
 	text-indent:25px;
-	color:#56A5EE;
-	font-size:12px;
+	color:#555;
+	font-size:14px;
+	border:1px solid #ddd;
+	border-bottom: none;
 }
 #sidebar ul{
-	border:1px solid #C5E4FF;
+	border:1px solid #ddd;
 	border-top:none;
 	padding:10px 10px 10px 30px;
 	margin:0 0 10px 0;
 }
 #sidebar ul li{
-	height:20px;
-	line-height:20px;
-	background:url(../images/sidebar_line.png) no-repeat left center;
-	padding:0 0 0 25px;
+	height:25px;
+	line-height:25px;
+	background:url(../images/sidebar_line2.jpg) no-repeat left center;
+	padding:0 0 0 28px;
 }
 #sidebar ul li a{
-	height:20px;
-	line-height:20px;
+	height:25px;
+	line-height:25px;
 	display:block;
-	color:#369;
+	color:#333;
 	cursor:pointer;
 }
 #sidebar ul li a:hover{
-	color:#c30;
+	color:red;
 	text-decoration:underline;
 	
 }
@@ -48,17 +50,19 @@
 	color:gray;
 }
 #sidebar div{
-	border:1px solid #C5E4FF;
+	border:1px solid #ddd;
 	border-top:none;
 	margin:0 0 10px 0;
 }
 #sidebar dl{
 	padding:10px;
+	border-top: 1px solid #ddd;
 }
 #sidebar dl dt img{
 	display:block;
 	margin:0 auto;
-	border:1px solid #ccc;
+	width:220px;
+	height: 220px;
 }
 #sidebar dl dd{
 	padding:5px 0 0 5px;
@@ -70,49 +74,136 @@
 	font-family:Tahoma;
 	font-weight:bold;
 }
+#sidebar dl dd.title{
+	text-align: center;
+}
 #sidebar dl dd.title a{
 	color:#666;
 }
 #sidebar dl dd.title a:hover{
 	text-decoration:underline;
 }
+#sidebar .clear_all{
+	padding:20px;
+	text-align:center;
+	height: 38px;
+}
+#sidebar .clear_all a{
+	display:block;
+	float: right;
+	width:100px;
+	height:36px;
+	line-height:36px;
+	text-align:center;
+	background:#ec5e72;
+	color:#fff;
+}
 #main{
-	width:785px;
+	width:900px;
 	float:right;
 	margin:10px 0 0 0;
 }
 #main h2{
 	height:34px;
 	line-height:34px;
-	background:url(../images/list_h2_bg.png) repeat-x;
+	background:url(../images/h2_bg2.png)no-repeat 10px center;
 	text-indent:25px;
-	color:#56A5EE;
-	font-size:12px;
+	color:#555;
+	font-size:14px;
+	border:1px solid #ddd;
 }
 #main div.filter{
-	border:1px solid #C5E4FF;
+	border:1px solid #ddd;
+	border-top:none;
 	margin:0 0 10px 0;
 }
 #main div.filter p{
-	padding:10px;
+	padding:12px;
 }
 #main div.filter p span{
-	background:#C5E4FF;
-	padding:5px;
+	background:#777;
+	color: #fff;
+	padding:5px 10px;
 }
 #main div.filter p a{
 	text-decoration:underline;
-	color:#026ACB;
-	padding:5px;
+	color:#555;
+	padding:10px;
 }
 #main div.filter p a:hover{
-	color:#f60;
+	color:#ec5e72;
 }
 #main div.pro_list{
-	border:1px solid #C5E4FF;
-	padding:0 0 30px 0;
+	border-top:none;
+	padding:20px 0;
+	margin-left:-20px;
+    width:920px;
+    overflow: hidden;
+    padding-left: 3px;
 }
+
+
 #main dl {
+    width:260px;
+    padding:10px;
+    display:inline-block;
+    border:1px solid #ddd;
+    margin:0 0 20px 20px;
+}   
+#main dl dt{
+    width:260px;
+}
+#main dl dt img{
+    width:260px;
+}
+#main dl:hover{
+    border:1px solid #777;
+}
+#main dl dd{
+    padding:5px 0;
+}
+#main dl dd a{
+	color: #555;
+}
+#main dl dd strong{
+    font-size:16px;
+    font-family:Tahoma;
+    color:red;
+}   
+#main dl dd del{
+    color:#999;
+}  
+#main dl dd.price strong{
+    color:#555;
+} 
+#main dl dd.title a{
+    font-size:14px;
+    color:#555;
+}
+#main dl dd.commend a{
+    color: #555;
+} 
+#main dl dd.buy a{
+    color: #555;
+} 
+#main dd.buy .now_buy{
+    display: inline-block;
+    margin-left: 10px;
+    width:80px;
+    height: 34px;
+    line-height: 34px;
+    background: #ec5e72;
+    text-align: center;
+}
+#main dd.buy .now_buy a{
+    color: #f2f2f2;
+}
+#main dl dd.title a:hover{
+    text-decoration:underline;
+    color: #ec5e72;
+}
+
+/*#main dl {
 	width:224px;
 	padding:15px 0 0 24px;
 	display:inline-block;
@@ -159,7 +250,7 @@
 }
 #main dl dd a:hover{
 	text-decoration:underline;
-}
+}*/
 	
 	
 	
