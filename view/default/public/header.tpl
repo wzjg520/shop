@@ -3,7 +3,7 @@
 	<h1><a href="./"><img src="view/default/images/huahua_logo2.png" alt="花花家LOGO"></a></h1>
 	{if $smarty.cookies.user}
 	<p>
-		您好，{$smarty.cookies.user}，<a href="?a=user">个人中心</a> | <a href="?a=cart"><i class="cat"></i>购物袋(<strong>0</strong>)</a> | <a href="?a=user&m=loginOut">退出</a>
+		您好，{$smarty.cookies.user}，<a href="?a=user">个人中心</a> | <a href="?a=cart"><i class="cat"></i>购物袋(<strong>{$cartGoodsCount.num}</strong>)</a> | <a href="?a=user&m=loginOut">退出</a>
 	</p>
 	{else}
 	<p>

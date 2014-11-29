@@ -12,6 +12,7 @@ class DetailsAction extends Action{
 		$this->goods=new GoodsModel();
 		$this->commend=new CommendModel();
 		$this->record=new RecordModel();
+		$this->cart=new cart();
 		
 	}
 	public function index(){
@@ -26,6 +27,7 @@ class DetailsAction extends Action{
 		$this->tpl->assign('hotSale',$this->goods->getHotSale());
 		$this->tpl->assign('history',$this->goods->getHistory());
 		$this->tpl->assign('allCommend',$this->commend->findAll());
+		$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 		$this->tpl->display(FRONT_STYLE.'public/details.tpl');
 	}
 }

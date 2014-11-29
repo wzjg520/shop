@@ -19,6 +19,7 @@ class CartAction extends Action{
 	public function index(){
 		$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
 		$this->tpl->assign('frontProduct',$this->cart->getProduct());
+		$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 		$this->tpl->display(FRONT_STYLE.'public/cart.tpl');
 	}
 	//从cookie添加商品

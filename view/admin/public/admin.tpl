@@ -24,7 +24,7 @@
 		<dt>起始页</dt>
 		<dd><a href="?a=admin&m=main" target="in">系统信息</a></dd>
 		<dd><a href="#">网站公告</a></dd>
-		<dd><a href="#">首页轮播器</a></dd>	
+		<dd><a href="?a=rotator" target="in">首页轮播器</a></dd>	
 	</dl>
 	<dl style="display:none">
 		<dt>商品</dt>
