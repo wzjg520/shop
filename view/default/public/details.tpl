@@ -51,9 +51,9 @@
 				</dl>
 				{/if}
 			{foreachelse}
-			<p style="padding:20px;color">暂无历史记录</p>
+			<p class="clear_all">暂无历史记录</p>
 			{/foreach}
-			<p style="padding:10px;text-align:right"><a href="?a=list&m=clearHistory">清理全部</a></p>
+			<p class="clear_all"><a href="?a=list&m=clearHistory">清理全部</a></p>
 		</div>
 	</div>
 	<div id="main">

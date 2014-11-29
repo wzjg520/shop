@@ -4,58 +4,58 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>在线商城系统</title>
 <link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
-<link rel="stylesheet" type="text/css" href="view/default/style/pay.css" />
+<link rel="stylesheet" type="text/css" href="view/default/style/list.css" />
 </head>
 <body>
 {include file='default/public/header.tpl'}
 <div id="sait">
 	当前位置：<a href="./">首页</a> &gt; 支付宝支付	
 </div>
-
-<div id="sidebar">
-	<h2>当月热销</h2>
-	<div style="margin:0 0 10px 0">
-		{foreach from=$hotSale key=key item=value}
-		{if  $key<3}
+<div id="shop_main">
+	<div id="sidebar">
+		<h2>当月热销</h2>
+		<div style="margin:0 0 10px 0">
+			{foreach from=$hotSale key=key item=value}
+			{if  $key<3}
+				<dl>
+					<dt><a target="_blank" href="?a=details&navid={$value->nav}&goodsid={$value->id}"><img width="100" height="100" src="{$value->thumb_small}"/></a></dt>
+					<dd class="price">￥{$value->price_sale}元</dd>
+					<dd class="title"><a target="_blank" href="?a=details&navid={$value->nav}&goodsid={$value->id}">{$value->name}</a></dd>
+				</dl>
+				{/if}
+			{/foreach}
+		</div>
+		<h2>浏览记录</h2>
+		<div style="margin:0 0 10px 0">
+			{foreach from=$history key=key item=value}
+				{if  $key<5}
+				<dl>
+					<dt><a target="_blank" href="?a=details&navid={$value.navid}&goodsid={$value.goodsid}"><img width="100" height="100" src="{$value.thumb_small}"/></a></dt>
+					<dd class="price">￥{$value.price_sale}元</dd>
+					<dd class="title"><a target="_blank" href="?a=details&navid={$value.navid}&goodsid={$value.goodsid}">{$value.name}</a></dd>
+				</dl>
+				{/if}
+			{foreachelse}
+			<p style="padding:20px;color">暂无历史记录</p>
+			{/foreach}
+		</div>
+	</div>
+	<div id="main">
+		<h2>在线支付</h2>
+		<div class="alipay">
+			{if $oneOrder[0]->order_state == '已取消' || $oneOrder[0]->order_pay == '已付款' || $OneOrder[0]->order_delivery == '已配货' || $oneOrder[0]->order_delivery == '已发货'}
+			<dl><dd>此订单已被锁定！<input type="button" value="返回" onclick="javascript:history.go(-1);" /></dd></dl>
+			{else}
 			<dl>
-				<dt><a target="_blank" href="?a=details&navid={$value->nav}&goodsid={$value->id}"><img width="100" height="100" src="{$value->thumb_small}"/></a></dt>
-				<dd class="price">￥{$value->price_sale}元</dd>
-				<dd class="title"><a target="_blank" href="?a=details&navid={$value->nav}&goodsid={$value->id}">{$value->name}</a></dd>
+				<dd>订 单 号：{$oneOrder[0]->ordernum}</dd>
+				<dd>总 金 额：{$oneOrder[0]->price}/元</dd>
+				<dd>订单详情：{$oneOrder[0]->text}</dd>
+				<dd>您选择的方式是：货到付款，您可在确认收货时直接将款项付于快递员</dd>
 			</dl>
 			{/if}
-		{/foreach}
-	</div>
-	<h2>浏览记录</h2>
-	<div style="margin:0 0 10px 0">
-		{foreach from=$history key=key item=value}
-			{if  $key<5}
-			<dl>
-				<dt><a target="_blank" href="?a=details&navid={$value.navid}&goodsid={$value.goodsid}"><img width="100" height="100" src="{$value.thumb_small}"/></a></dt>
-				<dd class="price">￥{$value.price_sale}元</dd>
-				<dd class="title"><a target="_blank" href="?a=details&navid={$value.navid}&goodsid={$value.goodsid}">{$value.name}</a></dd>
-			</dl>
-			{/if}
-		{foreachelse}
-		<p style="padding:20px;color">暂无历史记录</p>
-		{/foreach}
-</div>
-
-<div id="main">
-	<h2>在线支付</h2>
-	<div class="alipay">
-		{if $oneOrder[0]->order_state == '已取消' || $oneOrder[0]->order_pay == '已付款' || $OneOrder[0]->order_delivery == '已配货' || $oneOrder[0]->order_delivery == '已发货'}
-		<dl><dd>此订单已被锁定！<input type="button" value="返回" onclick="javascript:history.go(-1);" /></dd></dl>
-		{else}
-		<dl>
-			<dd>订 单 号：{$oneOrder[0]->ordernum}</dd>
-			<dd>总 金 额：{$oneOrder[0]->price}/元</dd>
-			<dd>订单详情：{$oneOrder[0]->text}</dd>
-			<dd>您选择的方式是：货到付款，您可在确认收货时直接将款项付于快递员</dd>
-		</dl>
-		{/if}
+		</div>
 	</div>
 </div>
-
 {include file='default/public/footer.tpl'}
 </body>
 </html>

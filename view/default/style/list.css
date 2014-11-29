@@ -203,54 +203,84 @@
     color: #ec5e72;
 }
 
-/*#main dl {
-	width:224px;
-	padding:15px 0 0 24px;
-	display:inline-block;
-}	
-#main dl dt{
-	width:224px;
-	border:1px solid #C5E4FF;
-}	
-#main dl dt img{
-	margin:2px 0 0 2px;
-}
-#main dl dd{
-	padding:5px 0;
-}
-#main dl dd strong{
-	font-size:14px;
-	font-family:Tahoma;
-	color:red;
-}	
-#main dl dd del{
-	color:#999;
-}	
-#main dl dd.title a{
-	font-size:14px;
-	color:#026ACB;
-}	
-#main dl dd.title a:hover{
-	text-decoration:underline;
-}	
-#main dl dd.commend{
+#main table{	
+	width:100%;
+	border-top:none;
+	margin:10px 0;
 	text-align:center;
-}	
-#main dl dd.commend a{
-	color:#666;
-}	
-#main dl dd.commend a:hover{
-	text-decoration:underline;
-}	
-#main dl dd.buy{
+	background:#777;	
+	border-spacing:1px;
+	font-size:12px;
+}
+#main table caption{
+	font-size:14px;
+	font-weight:bold;
+	color:#000;
+	height:30px;
+	line-height:30px;
+}
+#main table td,#main table th{
+	background:#fff;
+	padding:8px 0;	
+}
+#main table td a{
+	color: #000;
+}
+
+#main table td textarea{
+	max-width:99%;
+	min-width:99%;
+}
+#main table td input.num{
+	width:40px;
 	text-align:center;
 }
-#main dl dd a{
-	color:#336699;
+
+#main form dl dd{
+	padding:3px 240px;
 }
-#main dl dd a:hover{
-	text-decoration:underline;
-}*/
+#main form dl dd input.text{
+	width:200px;
+}
+#main form input.submit{
+	width:140px;
+	height:30px;
+	cursor:pointer;
+	background:#ec5e72;
+	border-radius: 2px;
+	color: #fff;
+	font-size: 16px;
+	border:none;
+}
+#main table.left{
+	text-align:left;
+	text-indent:10px;
+}
+#main table.left input[type="text"]{
+	border:1px solid #ddd;
+	padding:5px;
+	border-radius: 2px;
+}
+#main table.left td.submit{
+	text-indent:0;	
+	text-align:center;
+}
+#main .pay,#main .alipay{
+	border:1px solid #ddd;
+	border-top:none;
+}
+#main .pay dl,#main .alipay dl{
+	border:none;
+}
+#main .pay dl input[name="send"]{
+	background: #ec5e72;
+	padding:4px;
+	color: #fff;
+	border-radius: 2px;
+	border:none;
+	cursor:pointer;
+}
+
 	
 	
 	

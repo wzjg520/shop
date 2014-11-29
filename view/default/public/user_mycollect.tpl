@@ -4,13 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>在线商城系统</title>
 <link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
-<link rel="stylesheet" type="text/css" href="view/default/style/user_mycollect.css" />
+<link rel="stylesheet" type="text/css" href="view/default/style/list.css" />
 </head>
 <body>
 {include file='default/public/header.tpl'}
 <div id="sait">
 	当前位置：<a href="?a=user">个人中心</a> &gt; 我的收藏 	
 </div>
+<div id="shop_main">
 {include file='default/public/user_sidebar.tpl'}
 <div id="main">
 	<h2>我的评论</h2>
@@ -26,6 +27,7 @@
 		{/foreach}
 		<div id="page">{$page}</div>			
 	</div>
+</div>
 </div>
 {include file='default/public/footer.tpl'}
 </body>

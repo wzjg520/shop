@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="view/default/style/basic.css" type="text/css"/>
+<link rel="stylesheet" href="view/default/style/list.css" type="text/css"/>
 <link rel="stylesheet" href="view/default/style/user.css" type="text/css"/>
 <link rel="shortcut icon" type="image/x-icon" href="view/default/images/icon.ico"/>
 <script type="text/javascript" src="view/default/js/jquery.js"></script>
@@ -13,6 +14,7 @@
 <div id="sait">
 	 当前位置：<a href="./">首页</a> &gt; 个人中心
 </div>
+<div id="shop_main">
 {include file='default/public/user_sidebar.tpl'}
 <div id="main">	
 	<h2><a href="?a=cart">[去结算中心]</a>订单列表</h2>
@@ -74,7 +76,7 @@
 				----
 				{/if}
 			{else}
-				<a href="">在线支付</a> | 
+				<a href="?a=cart">在线支付</a> | 
 				<a href="?a=user&m=cancel&id={$value->id}" onclick="return confirm('您确定要取消吗') ? true : false">取消</a> 
 			{/if}
 		
@@ -82,6 +84,7 @@
 		{/foreach}
 	</table>
 	<div id="page">{$page}</div>
+</div>
 </div>
 {include file='default/public/footer.tpl'}
 </body>

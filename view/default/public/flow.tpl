@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="view/default/style/basic.css" type="text/css"/>
-<link rel="stylesheet" href="view/default/style/flow.css" type="text/css"/>
+<link rel="stylesheet" href="view/default/style/cart.css" type="text/css"/>
 <link rel="shortcut icon" type="image/x-icon" href="view/default/images/icon.ico"/>
 <script type="text/javascript" src="view/default/js/jquery.js"></script>
 <script type="text/javascript" src="view/default/js/flow.js"></script>
@@ -86,7 +86,7 @@
 		</td></tr>
 	</table>
 	<p id="total">商品总计：<strong>{$total_sale}</strong>/元 + 物流运费：<strong></strong>/元 + 支付手续费：<strong></strong>/元</p>
-	<p>您总共要支付的金额为：<strong class="red price"></strong></p>
+	<p>您总共要支付的金额为：<strong class="red price"></strong> 元</p>
 	
 	<input type="hidden" value="{$smarty.cookies.user}" name="user"/>
 	<input type="hidden" value="{$frontUser[0]->name}" name="name"/>
@@ -97,7 +97,7 @@
 	<input type="hidden" value="{$frontUser[0]->buildings}" name="buildings"/>
 	<input type="hidden" value="" class="pay" name="pay"/>
 	<input type="hidden" value="" class="form_price" name="price"/>	
-	<p style="text-align:center;"><input type="submit" class="submit" name="send" value="" /></p>
+	<p style="text-align:center;"><input type="submit" class="submit" name="send" value="提交订单" /></p>
 	</form>	
 </div>
 {include file='default/public/footer.tpl'}
