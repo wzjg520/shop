@@ -69,7 +69,7 @@
 		<input type="hidden" name="weight" value="{$oneGoods[0]->weight}"/>
 		<h2>{$oneGoods[0]->name}</h2>
 		<dl class="pic">
-			<dt><img src="{$oneGoods[0]->thumb}"/></dt>
+			<dt id="midImg"><img src="{$oneGoods[0]->thumb}"/><div id="mask"></div></dt>
 			<script>var thumbnail = '{$domain}{$oneGoods[0]->thumb}';</script>
 			{literal}
 			
@@ -95,6 +95,7 @@
 			{/literal}
 		</dl>	
 		<dl class="text">
+			<dt id="zoomLarge"><img src="{$oneGoods[0]->thumb}"/></dt>
 		   <dd>售　　价：<span class="sale">￥{$oneGoods[0]->price_sale}</span> <span class="market">￥{$oneGoods[0]->price_market}</span></dd>
 		   <dd>商品编号：{$oneGoods[0]->sn}</dd>
 		   <dd class="mark">所属品牌：{$oneGoods[0]->brand}</dd>
