@@ -1,73 +1,8 @@
 @CHARSET "UTF-8";
-#sait{
-	background:url(../images/sait_bg.png) repeat-x;
-	height:36px;
-	line-height:36px;
-	padding:0 0 0 15px;
-	border:1px solid #C5E4FF;
-	border-top:none;
-}
-#sidebar{
-	width:200px;
-	float:left;
-	margin:10px 0 0 0;
-}
-#sidebar h2{
-	height:34px;
-	line-height:34px;
-	background:url(../images/h2_bg.png) repeat-x;
-	text-indent:25px;
-	color:#56A5EE;
-	font-size:12px;
-}
-#sidebar ul{
-	border:1px solid #C5E4FF;
-	border-top:none;
-	padding:10px 10px 10px 30px;
-	margin:0 0 10px 0;
-}
-#sidebar ul li{
-	height:20px;
-	line-height:20px;
-	background:url(../images/sidebar_line.png) no-repeat left center;
-	padding:0 0 0 25px;
-}
-#sidebar ul li a{
-	height:20px;
-	line-height:20px;
-	display:block;
-	color:#369;
-	cursor:pointer;
-}
-#sidebar ul li a:hover{
-	color:#c30;
-	text-decoration:underline;
-	
-}
-#sidebar div{
-	border:1px solid #C5E4FF;
-	border-top:none;
-	margin:0 0 10px 0;
-}
-#main{
-	width:785px;
-	float:right;
-	
-	margin:10px 0 0 0;
-}
-
 #main div.commend{
 	border:1px solid #C5E4FF;
 	border-top:none;
 	padding:10px;
-}
-#main h2{
-	height:34px;
-	line-height:34px;
-	background:url(../images/list_h2_bg.png) repeat-x;
-	text-indent:25px;
-	color:#56A5EE;
-	font-size:12px;
 }
 #main div.filter{
 	border:1px solid #C5E4FF;
@@ -96,33 +31,56 @@
 	float:left;
 	display:blcok;
 }
-#main dl {
-	padding:10px 0 0 40px;
-	float:left;
+#main div.commend{
+	padding-top:15px;
 }
-#main dl dt{
+#main div.commend dl {
+	padding:0;
+	padding-left: 10px;
+	float:left;
+	width:auto;
+	border:none;
+}
+#main div.commend dl dt{
 	color:#333;
 	font-weight:bold;
 	font-size:14px;
-	padding:10px 0 10px 0;
+	padding:0 0 10px 0;
 }
-#main dd{
+#main div.commend dd{
 	padding:3px;
 }
-#main dd.content{
+#main div.commend dd.content{
 	color:#666;
 	padding:10px 0 20px 0;
 }		
-#main dd p{
+#main div.commend dd p{
 	padding:5px 0;
 }
-#main dd span.star{
+#main div.commend dd span.star{
 	color:orange;
 }
-#main dd textarea{
+#main div.commend input[name="star"]{
+	vertical-align: -2px;
+}
+#main div.commend dd textarea{
 	width:400px;
 	height:100px;
+	border:1px solid #ccc;
+	padding:5px;
+	font-size: 12px;
 }
 #main p.clear{
 	clear:both;
+}
+#main div.commend input[name="send"]{
+    width:80px;
+    height: 34px;
+    line-height: 34px;
+    background: #ec5e72;
+    text-align: center;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
 }

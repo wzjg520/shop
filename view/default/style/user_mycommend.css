@@ -1,98 +1,40 @@
 @CHARSET "UTF-8";
-#sait{
-	background:url(../images/sait_bg.png) repeat-x;
-	height:36px;
-	line-height:36px;
-	padding:0 0 0 15px;
-	border:1px solid #C5E4FF;
-	border-top:none;
-}
-#sidebar{
-	width:200px;
-	float:left;
-	margin:10px 0 0 0;
-}
-#sidebar h2{
-	height:34px;
-	line-height:34px;
-	background:url(../images/h2_bg.png) repeat-x;
-	text-indent:25px;
-	color:#56A5EE;
-	font-size:12px;
-}
-#sidebar ul{
-	border:1px solid #C5E4FF;
-	border-top:none;
-	padding:10px 10px 10px 30px;
-	margin:0 0 10px 0;
-}
-#sidebar ul li{
-	height:20px;
-	line-height:20px;
-	background:url(../images/sidebar_line.png) no-repeat left center;
-	padding:0 0 0 25px;
-}
-#sidebar ul li a{
-	height:20px;
-	line-height:20px;
-	display:block;
-	color:#369;
-	cursor:pointer;
-}
-#sidebar ul li a:hover{
-	color:#c30;
-	text-decoration:underline;
-	
-}
-#sidebar div{
-	border:1px solid #C5E4FF;
-	border-top:none;
-	margin:0 0 10px 0;
-}
-#main{
-	width:785px;
-	float:right;	
-	margin:10px 0 0 0;
-}
 
 #main div.mycommend{
 	border:1px solid #C5E4FF;
 	border-top:none;
 	padding:10px;
 }
-#main h2{
-	height:34px;
-	line-height:34px;
-	background:url(../images/list_h2_bg.png) repeat-x;
-	text-indent:25px;
-	color:#56A5EE;
-	font-size:12px;
-}
-#main dl {
-	padding:10px 0 0 40px;
+
+#main .mycommend dl {
+	padding:10px 0 10px 40px;
 	float:left;
+	width:auto;
+	margin:0 0 10px 20px
 }
-#main dl dt{
+#main .mycommend dl dt{
 	float:left;
+	width:auto;
 }
-#main dl dt img{
+#main .mycommend dl dt img{
 	width:100px;
 	height:100px;
 }
-#main dl dd{
+#main .mycommend dl dd{
 	padding:0 0 0 20px;
 	float:left;
 	width:500px;
 	line-height:20px;
 }
-#main dl dd span.date{
+#main .mycommend dl dd span.date{
 	float:right;
 }
-#main dl dd span.star{
+#main .mycommend dl dd span.star{
 	color:orange;
 }
 #main div.mycommend p{
 	clear:both;
 	padding:10px 20px;
+	margin-bottom: 20px;
 	border-bottom:1px dashed #ccc;
 }

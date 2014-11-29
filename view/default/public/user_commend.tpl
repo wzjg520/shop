@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>在线商城系统</title>
 <link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
+<link rel="stylesheet" type="text/css" href="view/default/style/list.css" />
 <link rel="stylesheet" type="text/css" href="view/default/style/user_commend.css" />
 </head>
 <body>
@@ -11,6 +12,7 @@
 <div id="sait">
 	当前位置：<a href="?a=user">个人中心</a> &gt; 商品评论	
 </div>
+<div id="shop_main">
 {include file='default/public/user_sidebar.tpl'}
 <form method="post" action="?a=user&m=commend">
 	<input type="hidden" name="goods_id" value="{$smarty.get.goods_id}"/>
@@ -58,7 +60,7 @@
 		</div>
 	</div>
 </form>
-
+<div id="shop_main">
 {include file='default/public/footer.tpl'}
 </body>
 </html>

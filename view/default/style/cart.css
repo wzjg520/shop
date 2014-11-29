@@ -1,24 +1,23 @@
 @CHARSET "UTF-8";
 #cart{
-	margin:10px 0 0 0;
-	border:1px solid #BBDDE5;
+	width:1200px;
+	margin:10px auto 0;
+	border:1px solid #ddd;
 }
 #cart h2{
-	text-align:left;
-	height:30px;
-	line-height:30px;
-	font-weight:bold;
+	height:34px;
+	line-height:34px;
+	background:url(../images/h2_bg2.png)no-repeat 10px center;
+	text-indent:25px;
+	color:#555;
 	font-size:14px;
-	padding:0 0 0 15px;
-	background:#EEF8F9;
 }
 #cart table{	
 	width:98%;
-	border:1px solid #BBDDE5;
 	border-top:none;
 	margin:10px;
 	text-align:center;
-	background:#71c7fa;	
+	background:#777;	
 	border-spacing:1px;
 	font-size:12px;
 }
@@ -32,12 +31,52 @@
 }
 #cart p{
 	margin:10px;
-	border:1px solid #BBDDE5;
 	padding:10px;
+	overflow: hidden;
+	text-align: right;
 }
 #cart p span{
 	float:right;
 }
-#cart div{
-	padding:0 0 10px 84.8%;
+#cart div.now_pay{
+	text-align: right;
+}
+#cart div.now_pay a{
+	display: inline-block;
+	background: #ec5e72;
+	text-align: center;
+	width:140px;
+	height: 36px;
+	line-height: 36px;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 2px;
+	margin:0 10px 10px 0;
+}
+#cart table caption{
+	font-size:14px;
+	font-weight:bold;
+	color:#000;
+	height:30px;
+	line-height:30px;
+	padding-bottom: 6px;
+}
+#cart table td textarea{
+	max-width: 99%;
+    min-width: 99%;
+    border:1px solid #ccc;
+    font-size: 12px;
+    padding:2px;	
+}
+#cart input[name="send"]{
+	background: #ec5e72;
+	text-align: center;
+	width:140px;
+	height: 36px;
+	line-height: 36px;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 2px;
+	border:none;
+	cursor:pointer;
 }
