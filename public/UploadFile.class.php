@@ -98,10 +98,15 @@ class UploadFile{
 	}
 	//上传专用弹窗赋值关闭
 	public function alertThumbClose($_info,$_path){
+
+		$end=strrchr($_path, '.');
+		$start=substr($_path,0,-strlen($end));
+		$_path=$start.'.png';
 		echo "<script>alert('$_info')</script>";
 		echo "<script>opener.document.form.thumb.value='$_path'</script>";
 		echo "<script>opener.document.form.pic.style.display='block'</script>";
 		echo "<script>opener.document.form.pic.src='$_path'</script>";
+		echo "<script>opener.document.pic.src='$_path'</script>";
 		echo  "<script>window.close();</script>";
 	}
 

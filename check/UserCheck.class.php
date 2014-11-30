@@ -31,25 +31,38 @@ class UserCheck extends Check{
 		}
 		return $this->flag;
 	}
-	/* public function checkUpdate(&$model){
-		if(Validate::checkStrLength($_POST['pwd'], 6, 'min')){
-			$this->message[]='密码不得小于6位';
+	// public function checkUpdate(&$model){
+	// 	if(Validate::checkStrLength($_POST['pwd'], 6, 'min')){
+	// 		$this->message[]='密码不得小于6位';
+	// 		$this->flag=false;
+	// 	}
+	// 	if(Validate::isNullStr($_POST['pwd'])){
+	// 		$this->message[]='密码不得为空';
+	// 		$this->flag=false;
+	// 	}
+	// 	if(!Validate::checkStrEquals($_POST['pwd'], $_POST['notpwd'])){
+	// 		$this->message[]='密码和确认码必须一致';
+	// 		$this->flag=false;
+	// 	}
+	// 	if(Validate::isNullStr($_POST['level'])){
+	// 		$this->message[]='管理员等级不得为空';
+	// 		$this->flag=false;
+	// 	}
+	// 	return $this->flag;	
+	// } 
+
+	public function checkUpdate(&$model){
+		if(Validate::checkStrLength($_POST['user'], 2, 'min')){
+			$this->message[]='用户名长度不得小于2位';
 			$this->flag=false;
 		}
-		if(Validate::isNullStr($_POST['pwd'])){
-			$this->message[]='密码不得为空';
-			$this->flag=false;
-		}
-		if(!Validate::checkStrEquals($_POST['pwd'], $_POST['notpwd'])){
-			$this->message[]='密码和确认码必须一致';
-			$this->flag=false;
-		}
-		if(Validate::isNullStr($_POST['level'])){
-			$this->message[]='管理员等级不得为空';
+		if(Validate::checkStrLength($_POST['user'], 20, 'max')){
+			$this->message[]='用户名长度不得大于20位';
 			$this->flag=false;
 		}
 		return $this->flag;	
-	} */
+	} 
+
 	//检查登陆数据
 	public function checkLogin(&$model,Array $param){
 	if(Validate::checkStrLength($_POST['user'], 2, 'min')){
