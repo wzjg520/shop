@@ -312,4 +312,13 @@ span.succ{
 #footer p a{
 	color: #fff;
 }
+#footer .box{
+	width:1140px;
+	margin:0 auto;
+	padding: 10px 30px 10px;
+	border-bottom: 2px solid #fff;
+	margin-bottom: 10px;
+	background:url(../images/report2.png) no-repeat left center;
+}
+
 
