@@ -25,7 +25,7 @@
 			<dd><label>密　　码：</label><input type="password" id="pwd" name="pwd" class="text"/><span class="red"> *</span></dd>
 			<dd><label>确认密码：</label><input type="password"  name="notpwd" class="text"/><span class="red"> *</span></dd>
 			<dd  class="face"><label style="float:left;padding-top:40px;">默认头像：</label><img name="pic" src="view/default/images/default_face.jpg" style="float:left"/> <input style="margin-top:40px;" type="button" value="上传" onclick="javascript:centerWindow(500,200)"/><em style="padding-top:40px;">（*请上传200k内jpg、gif、png格式的图片）</em></dd>
-			<dd><label>安全问题：</label><select name="question" class="text">
+			<dd style="clear:both;"><label>安全问题：</label><select name="question" class="text">
 										<option value="">--请选择一个问题</option>
 										<option value="您父亲的名字是">您父亲的姓名是</option>
 										<option value="您母亲的年龄是">您母亲的年龄是</option>
