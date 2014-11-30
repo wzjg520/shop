@@ -35,6 +35,7 @@ class UserAction extends Action{
 		$this->tpl->display(FRONT_STYLE.'public/reg.tpl');
 	}
 
+	//后台
 	public function update(){
 		if(isset($_POST['send'])){
 			if($this->model->update()){
@@ -45,6 +46,16 @@ class UserAction extends Action{
 		}
 	}
 
+	//前台
+	public function update2(){
+		if(isset($_POST['send'])){
+			if($this->model->update2()){
+				$this->redirect->success('会员修改成功','?a=user',1);
+			}else{
+				$this->redirect->error('会员注册失败',1);
+			};
+		}
+	}
 	public function login(){
 		if(isset($_POST['send'])){
 			if($this->model->login()){

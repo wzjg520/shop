@@ -10,11 +10,16 @@ class Check extends Validate{
 		$this->tpl=new TPL();
 	}
 	//显示错误页面
-	public function showError($url=''){
+	public function showError($url='',$type=0){
 		if(empty($url)){
 			$this->tpl->assign('message',$this->message);
 			$this->tpl->assign('prev_url',PREV_URL);
-			$this->tpl->display(ADMIN_STYLE.'public/error.tpl');
+			if($type==0){
+				$this->tpl->display(ADMIN_STYLE.'public/error.tpl');
+			}else{
+				$this->tpl->display(ADMIN_STYLE.'public/error_index.tpl');
+			}
+			
 			exit();
 		}else{
 			Redirect::getInstance()->success('','./');

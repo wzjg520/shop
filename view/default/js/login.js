@@ -25,7 +25,7 @@ $(function(){
 			},
 			pwd:{
 				required:true,
-				min:6,				
+				minlength:6,				
 			},
 			validateCode:{
 				required:true,
@@ -45,7 +45,7 @@ $(function(){
 			},
 			pwd:{
 				required:' 密码不得为空',
-				min:' 密码长度不得小于6位',
+				minlength:' 密码长度不得小于6位',
 			},
 			validateCode:{
 				required:' 验证码不能为空',
