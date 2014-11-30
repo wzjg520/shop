@@ -13,6 +13,9 @@ class IndexAction extends Action{
 		$this->rotator=new RotatorModel();
 	}
 	public function index(){
+
+		$this->redirect->success('导航新增成功',$_POST['prev_url'],1);
+		exit;
 		$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 		$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
 		$this->tpl->assign('hotSale',$this->goods->getHotSale());
