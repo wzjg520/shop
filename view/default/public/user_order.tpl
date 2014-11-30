@@ -76,7 +76,7 @@
 				----
 				{/if}
 			{else}
-				<a style="color:green;" href="?a=cart">在线支付</a> | 
+				<a style="color:green;" href="?a=user&m=alipay&id={$value->id}">在线支付</a> | 
 				<a style="color:red;" href="?a=user&m=cancel&id={$value->id}" onclick="return confirm('您确定要取消吗') ? true : false">取消</a> 
 			{/if}
 		

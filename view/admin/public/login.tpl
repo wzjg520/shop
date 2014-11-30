@@ -19,7 +19,7 @@
 			</dd>
 		<dd>
 			<label for="pwd">密　　码：</label>
-				<input type="text" id="pwd" name="pwd" class="text"/>
+				<input type="password" id="pwd" name="pwd" class="text"/>
 			</dd>
 		<dd>
 			<label for="code">验 证 码：</label>
