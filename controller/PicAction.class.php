@@ -6,6 +6,7 @@ class PicAction extends Action {
 		parent::__construct();
 		$this->goods = new GoodsModel();
 		$this->rotator=new RotatorModel();
+		$this->user=new UserModel();
 	}
 	
 	public function index() {
@@ -32,6 +33,7 @@ class PicAction extends Action {
 		if (isset($_GET['file'])) {
 			$file = scandir(dirname(dirname(__FILE__)).'/upload/'.$_GET['file'].'/');
 			 $fileObj=$this->rotator->fileRotator($this->goods->fileGoods($file));
+			 $fileObj=$this->user->fileUser($fileObj);
 
 			$this->tpl->assign('file', $fileObj);
 			

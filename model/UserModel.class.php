@@ -11,7 +11,7 @@ class UserModel extends Model{
 				$this->R['user'],
 				$this->R['pwd'],
 		)=$this->getRequest()->getParam(array(
-				isset($_GET['id']) ? $_GET['id']: null,
+				isset($_GET['id']) ? $_GET['id']: $_COOKIE['userid'],
 				isset($_POST['user']) ? $_POST['user'] : null,
 				isset($_POST['pwd']) ? $_POST['pwd'] : null,
 		));
@@ -47,10 +47,11 @@ class UserModel extends Model{
 				array('where'=>array('a.level=b.id'),'order'=>' a.reg_time DESC','limit'=>$this->limit));
 	}
 	//查询一条数据
-	public function findOne(){		
+	public function findOne(){
+
 		$where=array("id='{$this->R['id']}'");
 		if(!$this->check->checkOne($this,$where))$this->check->showError();
-		return parent::select(array('id','user','level'),array('where'=>$where,'limit'=>'1'));
+		return parent::select(array('id','user','reg_time','login_time','thumb','email'),array('where'=>$where,'limit'=>'1'));
 	}
 	//验证登陆数据
 	public function login(){
@@ -70,15 +71,18 @@ class UserModel extends Model{
 	//退出登录
 	public function loginOut(){
 		setcookie('user','');
+		setcookie('userid','');
 		return true;
 	}
 	//设置登录信息
-	public function setLoginDetails() {
+	public function setLoginDetails($userid) {
 		$where = array("user='{$this->R['user']}'");
 		if(isset($_POST['keep'])){
 			setcookie('user',$this->R['user'],time()+604800);
+			setcookie('userid',$userid,time()+604800);
 		}else{
 			setcookie('user',$this->R['user']);
+			setcookie('userid',$userid);
 		}
 		$updateData['last_ip'] = Tool::getIP();
 		$updateData['login_time'] = Tool::getDate();
@@ -89,6 +93,14 @@ class UserModel extends Model{
 		$where=array("user='{$this->R['user']}'");
 		return $this->check->isExist($this,$where);
 	}
+
+	//ajax修改个人信息检验数据是否存在
+	public function isUpdateExist(){
+		$where=array("user='{$this->R['user']}'","id<>'{$_COOKIE['userid']}'");
+		return $this->check->isExist($this,$where);
+	}
+
+
 	//验证登陆密码是否正确
 	public function ajaxPwd(){
 		$where=array("user='{$this->R['user']}'","pwd='".sha1($this->R['pwd'])."'");
@@ -101,5 +113,25 @@ class UserModel extends Model{
 	//获取数据总条数
 	public function total(){
 		return parent::total();
+	}
+
+
+	//用于后台图片管理起过滤图片
+	public function fileUser($file) {
+		foreach ($file as $key=>$value) {
+
+			if(!is_object($value)){
+				$user = parent::select(array('id,user,thumb'),
+						array('where'=>array("thumb='upload/{$_GET['file']}/$value'")));
+			
+				if (!Validate::isNullArray($user)) {
+					$user[0]->pic = $value;
+					$user[0]->link='user';
+					$user[0]->name=$user[0]->user.'[<strong style="color:green;font-size:12px;">会员头像</strong>]';
+					$file[$key] = $user[0];
+				}
+			}						
+		}
+		return $file;
 	}
 }

@@ -19,6 +19,7 @@ class UserAction extends Action{
 	public function index(){
 		$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
 		$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
+		$this->tpl->assign('user',$this->model->findOne()[0]);
 		$this->tpl->display(FRONT_STYLE.'public/user.tpl');
 	}
 	public function reg(){
@@ -33,11 +34,22 @@ class UserAction extends Action{
 		$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
 		$this->tpl->display(FRONT_STYLE.'public/reg.tpl');
 	}
+
+	public function update(){
+		if(isset($_POST['send'])){
+			if($this->model->update()){
+				$this->redirect->success('会员修改成功','?a=user');
+			}else{
+				$this->redirect->error('会员注册失败');
+			};
+		}
+	}
+
 	public function login(){
 		if(isset($_POST['send'])){
 			if($this->model->login()){
 				$longer=$this->model->getLoginer();
-				$this->model->setLoginDetails();
+				$this->model->setLoginDetails($longer[0]->id);
 				$this->redirect->success('登陆成功','?a=index');
 			}
 		}
@@ -181,9 +193,16 @@ class UserAction extends Action{
 		echo $this->model->ajaxCode();
 	}
 	//用于ajax检测数据是否存在
+	
 	public function isExist(){
 		echo $this->model->isExist();
 	}
+
+	//修改ajax验证是否存在
+	public function isUpdateExist(){
+		echo $this->model->isUpdateExist();
+	}
+	
 	//ajax验证登陆
 	public function ajaxLogin(){
 		echo $this->model->isExist()=='true' ? 'false' : 'true';

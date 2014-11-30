@@ -27,7 +27,7 @@ class CollectModel extends Model {
 		foreach($result as $key=>$value){
 			$id.=$value->goods_id.',';
 		}
-		$id=substr($id, 0,-1);		
+		$id=substr($id, 0,-1) ? substr($id, 0,-1) : 0 ;		
 		$this->tables=array(DB_FREFIX.'goods g');
 		$allGoods=parent::select(array('id','name','thumb','price_sale','price_market','unit','sale_count','thumb_small','nav','(SELECT COUNT(*) FROM mall_commend c WHERE c.goods_id=g.id) AS count'),
 				array('where'=>array("id IN ($id)",'is_up=1'),'limit'=>$this->limit));	
