@@ -39,8 +39,8 @@
 				<dl>
 					<dd><label> 用 &nbsp;户 &nbsp;名：</label><input type="text" name="user" value="{$user->user}" class="text"/><span class="red"> *</span></dd>
 					<dd><label>性　　别：</label><label><input type="radio" name="gender" checked="checked" value="1"/>男</label><label><input type="radio" name="gender" value="0"/>女</label></dd>
-					<dd  class="face"><label>默认头像：</label><img name="pic" src="{$user->thumb}"/> <input type="button" value="上传" onclick="javascript:centerWindow(500,200)"/><em>（*请上传200k内jpg、gif、png格式的图片）</em></dd>
-					<dd><label>邮　　件：</label><input type="text" name="email" class="text" value="{$user->email}"/><span></span></dd>
+					<dd  class="face"><label style="float:left;padding-top:40px;">默认头像：</label><img name="pic" src="{$user->thumb}" style="float:left"/> <input style="margin-top:40px;" type="button" value="上传" onclick="javascript:centerWindow(500,200)"/><em style="padding-top:40px;">（*请上传200k内jpg、gif、png格式的图片）</em></dd>
+					<dd style="clear:both"><label>邮　　件：</label><input type="text" name="email" class="text" value="{$user->email}"/><span></span></dd>
 					<dd><label>验 &nbsp;证 &nbsp;码：</label><input type="text" name="validateCode" class="text code"/><span class="red">*</span></dd>
 					<dd class="code"><img src="?a=index&m=validateCode" alt="验证码" onclick=" this.src='?a=index&m=validateCode&'+Math.random();"/> <span class="change">看不清换一张</span></dd>
 
