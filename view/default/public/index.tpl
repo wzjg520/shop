@@ -91,7 +91,7 @@
 	<div class="brand">
 		<ul>
 			{foreach from=$allBrand key=key item=value}
-			<li><a href="{$value->url}" target="_blank"><!-- {$value->name} --><img src="view/default/images/huahua_logo2.png" alt="花花家LOGO"></a></li>
+			<li><a href="{$value->url}" target="_blank"><span>{$value->name}</span><!-- <img src="view/default/images/huahua_logo2.png" alt="花花家LOGO"> --></a></li>
 			{/foreach}
 		</ul>
 	</div>	

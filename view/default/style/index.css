@@ -424,34 +424,38 @@ p.clear{
 /*品牌联盟*/
 #main div.brand{
     width:1180px;
-    margin:0 auto;
+    margin:0 auto 40px;
     height: 150px;
     border:1px solid #ddd;
-    padding:5px 0 0 20px;
+    padding:20px 0 0 20px;
 }
 #main div.brand ul{
     float: left;
     height: 150px;
 }
 #main div.brand ul li{
-    width:120px;
+    width:134px;
     height: 50px;
     float: left; 
     background: #fff;
-    margin:0 5px; 
-    margin-bottom: 20px;
+    margin:0 6px; 
+    margin-bottom: 25px;
     position: relative;
+    text-align: center;
 }
-#main div.brand ul li img{
-    width:100px;
+#main div.brand ul li span{
+    display: block;
+    width:115px;
     position: absolute;
     top:0;
     left:0;
     z-index: 10;
     background: #fff;
     padding:15px 5px;
+    border:1px solid #ccc;
 }
 #main div.brand ul li a{
     display: block;
-    color: #fff;
+    color: #555;
+    font-size: 18px;
 }
