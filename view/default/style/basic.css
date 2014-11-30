@@ -319,6 +319,7 @@ span.succ{
 	border-bottom: 2px solid #fff;
 	margin-bottom: 10px;
 	background:url(../images/report2.png) no-repeat left center;
+	cursor:pointer;
 }
 
 
