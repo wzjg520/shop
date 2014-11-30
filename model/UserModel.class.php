@@ -57,7 +57,7 @@ class UserModel extends Model{
 	public function login(){
 		$where=array("user='{$this->R['user']}'","pwd='".sha1($this->R['pwd'])."'");
 		if(!$this->check->checkLogin($this, $where)){
-			$this->check->showError();
+			$this->check->showError('',1);
 		}else{
 			return true;
 		};
