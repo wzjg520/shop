@@ -19,9 +19,9 @@
 	<form action="?a=user&m=login" method="post" id="loginForm" name="form">
 		<dl>
 			<dt><h2>快速登录</h2><p class="short_line"></p></dt>
-			<dd><label>用 户 名：</label><input type="text" name="user" class="text"/><span> [必填](*用户名长度2到20位)</span></dd>
-			<dd><label>密　 码：</label><input type="password" id="pwd" name="pwd" class="text"/><span> [必填](*密码长度必须大于6位)</span></dd>
-			<dd><label>验 证 码：</label><input type="text" name="validateCode" class="text code"/><span>（*输入下图中的字符，不区分大小写）</span></dd>
+			<dd><label>用 户 名：</label><input type="text" name="user" class="text"/><span class="red">*</span></dd>
+			<dd><label>密　 码：</label><input type="password" id="pwd" name="pwd" class="text"/><span class="red">*</span></dd>
+			<dd><label>验 证 码：</label><input type="text" name="validateCode" class="text code"/><span class="red">*</span></dd>
 			<dd class="code"><img src="?a=index&m=validateCode" alt="验证码" onclick=" this.src='?a=index&m=validateCode&'+Math.random();"/> <span class="change">看不清换一张</span></dd>
 			<dd class="hold_mesg"><label><input type="checkbox" name="keep">保留这次登录信息</label></dd>
 			<dd><input type="submit" name="send" class="sub" value="登录"/></dd>
