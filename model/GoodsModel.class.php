@@ -239,7 +239,7 @@ class GoodsModel extends Model{
 				setcookie('compare['.$this->R['goodsid'].']',$this->R['navid'],time()+24*60*60*7);
 			}else{
 				$this->check->setMessage('不同类别的商品不能比较');
-				$this->check->showError();
+				$this->check->showError('',1);
 			}
 		}else{
 			setcookie('compare['.$this->R['goodsid'].']',$this->R['navid'],time()+24*60*60*7);
