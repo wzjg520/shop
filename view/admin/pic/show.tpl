@@ -14,7 +14,15 @@
 	<table class="public">
 		<tr><th>时间目录</th><th>图片张数</th><th>操作</th></tr>
 		{foreach from=$dir key=key item=value}
-		<tr><td>{$value}</td><td>{$key}</td><td><a href="?a=pic&m=file&file={$value}">进入目录</a></td></tr>
+		<tr><td>{$value}</td><td>{$key}</td>
+		{if $key|mb_substr:10:-1:utf8 eq 0}
+			<td><a href="?a=pic&m=delDir&file={$value}">删除目录</a></td>
+		{else}
+			<td><a href="?a=pic&m=file&file={$value}">进入目录</a></td>
+		{/if}
+		
+
+		</tr>
 		{/foreach}
 	</table>
 </div>

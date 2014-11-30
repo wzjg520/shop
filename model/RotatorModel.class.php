@@ -62,8 +62,8 @@ class RotatorModel extends Model{
 	}
 	//查询不带limit
 	public function getAll(){
-		return parent::select(array('name','thumb','link','date','id','state'),
-				array('order'=>' sort DESC',));
+		return parent::select(array('name','thumb','link','date','id','state','sort'),
+				array('order'=>' sort ASC',));
 	}
 	//查询一条数据
 	public function findOne(){
@@ -98,6 +98,7 @@ class RotatorModel extends Model{
 			
 				if (!Validate::isNullArray($rotator)) {
 					$rotator[0]->pic = $value;
+					$rotator[0]->link='index';
 					$rotator[0]->name=$rotator[0]->name.'[<strong style="color:green;font-size:12px;">轮播器</strong>]';
 					$file[$key] = $rotator[0];
 				}

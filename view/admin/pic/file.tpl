@@ -22,7 +22,10 @@
 		<span class="red">./uploads/{$smarty.get.file}/{$value}</span>
 		{/if}
 		</td><td>
-		{if $value->id}
+		{if $value->id and $value->link eq 'index' }
+
+		<a href="index.php" target="_blank">{$value->name}</a>
+		{elseif $value->id  }
 		<a href="?a=details&navid={$value->nav}&goodsid={$value->id}" target="_blank">{$value->name}</a>
 		{else}
 		是

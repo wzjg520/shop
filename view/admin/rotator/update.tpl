@@ -27,7 +27,7 @@
 		{/if}
 		
 
-		<dd>上传图片：<input type="text" class="text" name="thumb" style="width:350px" value="{$one->thumb}" readonly="readonly"/>　<input type="button" value="选择" onclick="centerWindow(500,200)"/><img name="pic" alt="轮播器图片" style="display:none"/> (*为保存图片完整性，最佳尺寸为：300 * 300  必须是jpg,gif,png，并且200k内)</dd>
+		<dd>上传图片：<input type="text" class="text" name="thumb" style="width:350px" value="{$one->thumb}" readonly="readonly"/>　<input type="button" value="选择" onclick="centerWindow(500,200)"/><img name="pic" alt="轮播器图片" src="{$one->thumb}" style="display:block;"/> (*为保存图片完整性，最佳尺寸为：300 * 300  必须是jpg,gif,png，并且200k内)</dd>
 		
 		<dd><input type="submit" name="send" value="修改轮播器"/></dd>
 	</dl>

@@ -119,7 +119,7 @@ class GoodsModel extends Model{
 
 				if (!Validate::isNullArray($goods)) {
 					$goods[0]->pic = $value;
-					$goods[0]->name=$goods[0]->name.'[<strong style="color:green;font-size:12px;">轮播器</strong>]';
+					$goods[0]->name=$goods[0]->name.'[<strong style="color:green;font-size:12px;">商品</strong>]';
 					$file[$key] = $goods[0];
 				}
 			}						

@@ -38,6 +38,15 @@ class PicAction extends Action {
 			$this->tpl->display(ADMIN_STYLE.'pic/file.tpl');
 		}
 	}
+
+	//删除空目录
+	public function delDir(){
+		if (isset($_GET['file'])) {
+			$dirPath = dirname(__DIR__).'/upload/'.$_GET['file'];
+			rmdir($dirPath);
+			$this->redirect->success('目录删除成功',PREV_URL);
+		}
+	}
 	
 	
 }
