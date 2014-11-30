@@ -16,7 +16,7 @@ class CommendAction extends Action{
 		}
 	} 
 	public function runUpdate(){	
-		if(isset($_POST['send'])) $this->model->update() ? $this->redirect->success('评价修改成功', $_POST['url']) : $this->redirect->error('管理员修改失败');
+		if(isset($_POST['send'])) $this->model->update() ? $this->redirect->success('评价修改成功', $_POST['url']) : $this->redirect->error('评价修改失败');
 		if(isset($_GET['id'])){
 			$oneCommend=$this->model->getOne();
 			$this->tpl->assign('oneCommend',$oneCommend[0]);

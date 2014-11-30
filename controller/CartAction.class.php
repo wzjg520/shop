@@ -8,7 +8,7 @@ class CartAction extends Action{
 	private $delivery=null;
 	public function __construct(){
 		parent::__construct();
-		if (!isset($_COOKIE['user'])) $this->redirect->success('购物前必须登录操作！','?a=user&m=login');
+		if (!isset($_COOKIE['user'])) $this->redirect->success('购物前必须登录操作！','?a=user&m=login',1);
 		$this->nav=new NavModel();
 		$this->cart=new Cart();
 		$this->order=new OrderModel();
@@ -58,11 +58,11 @@ class CartAction extends Action{
 					//清空购物车
 					$this->cart->clearProduct();				
 					if($_POST['pay']=='支付宝'){
-						$this->redirect->success('','?a=user&m=alipay&id='.$id);
+						$this->redirect->success('','?a=user&m=alipay&id='.$id,1);
 					}elseif($_POST['pay']=='银行转账'){
-						$this->redirect->success('','?a=user&m=transfer&id='.$id);
+						$this->redirect->success('','?a=user&m=transfer&id='.$id,1);
 					}elseif($_POST['pay']=='货到付款'){
-						$this->redirect->success('','?a=user&m=cash&id='.$id);
+						$this->redirect->success('','?a=user&m=cash&id='.$id,1);
 					}				
 				}
 			}

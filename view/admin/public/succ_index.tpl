@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<!-- <meta http-equiv="refresh" content="1;url={$url}" /> -->
+<meta http-equiv="refresh" content="1;url={$url}" />
 <title>ihuahua商城项目</title>
 <style>
 	body{
@@ -12,18 +12,18 @@
 		width:700px;
 		padding:20px;
 		background: #fff;
-		margin:30px auto 0;
+		margin:60px auto 0;
 	}
 	#list h2{
 		margin:0;
-	    font-weight: normal;
-	    font-size: 26px;
+	    	font-weight: normal;
+	    	font-size: 26px;
 	}
 	#list p.short_line{
-	    width:52px;
-	    height: 3px;
-	    background: red;
-	    margin:10px 0 20px 0;
+		width:52px;
+		height: 3px;
+		background: red;
+		margin:10px 0 20px 0;
 	}
 	#list dl{
 		overflow: hidden;
@@ -39,7 +39,7 @@
 </head>
 <body>	
 <div id="list" class="succ">
-	<h2>成功 -- 提示页</h2><p class="short_line"></p>
+	<h2>提示页</h2><p class="short_line"></p>
 	<dl>
 		<dt><img src="view/default/images/success.jpg" alt="" /></dt>
 		<dd>

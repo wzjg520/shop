@@ -19,12 +19,12 @@ class CompareAction extends Action{
 	//删除单个比较商品
 	public function deleteCompare(){
 		$this->goods->deleteCompare();
-		$this->redirect->success('','?a=compare');
+		$this->redirect->success('','?a=compare',1);
 	}
 	//删除全部比较商品
 	public function clearAll(){
 		$this->goods->clearAll();
-		$this->redirect->success('','?a=compare');
+		$this->redirect->success('','?a=compare',1);
 	}
 	//ajax删除全部商品比较
 	public function ajaxClearAll(){
@@ -38,11 +38,11 @@ class CompareAction extends Action{
 	//将比较商品写入cookie
 	public function setCompare(){
 		$this->goods->setCompare();
-		$this->redirect->success('','?a=compare');
+		$this->redirect->success('','?a=compare',1);
 	}
 	//清理浏览历史记录
 	public function clearHistory(){
 		$this->goods->clearHistory();
-		$this->redirect->success('',PREV_URL);
+		$this->redirect->success('',PREV_URL,1);
 	}	
 }

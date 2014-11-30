@@ -11,18 +11,18 @@
 		width:700px;
 		padding:20px;
 		background: #fff;
-		margin:30px auto 0;
+		margin:60px auto 0;
 	}
 	#list h2{
 		margin:0;
-	    font-weight: normal;
-	    font-size: 26px;
+		font-weight: normal;
+		font-size: 26px;
 	}
 	#list p.short_line{
-	    width:52px;
-	    height: 3px;
-	    background: red;
-	    margin:10px 0 20px 0;
+	    	width:52px;
+	    	height: 3px;
+	    	background: red;
+	    	margin:10px 0 20px 0;
 	}
 	#list dl{
 		overflow: hidden;
