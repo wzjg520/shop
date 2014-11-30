@@ -18,8 +18,9 @@
 		<dd><label for="name">图片名称：</label><input type="text" id="name" name="name" class="text"/><span class="red"> (*)</span></dd>
 		
 		<dd><label for="link">链接地址：</label><input type="text" id="link" name="link" class="text"/><span class="red"> (*)</span></dd>
+		<dd><label>首页显示：</label><label><input type="radio" checked="checked" name="state" value="1"/>是 </label><label><input type="radio" name="state" value="0"/>否</label></dd>
 
-		<dd>上传图片：<input type="text" class="text" name="thumb" readonly="readonly"/>　<input type="button" value="选择" onclick="centerWindow(500,200)"/><img name="pic" alt="轮播器图片" style="display:none"/> (*为保存图片完整性，最佳尺寸为：300 * 300  必须是jpg,gif,png，并且200k内)</dd>
+		<dd>上传图片：<input type="text" class="text" name="thumb" style="width:350px" readonly="readonly"/>　<input type="button" value="选择" onclick="centerWindow(500,200)"/><img name="pic" alt="轮播器图片" style="display:none"/> (*为保存图片完整性，最佳尺寸为：300 * 300  必须是jpg,gif,png，并且200k内)</dd>
 		
 		<dd><input type="submit" name="send" value="新增轮播器"/></dd>
 	</dl>

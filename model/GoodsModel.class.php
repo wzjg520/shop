@@ -110,14 +110,18 @@ class GoodsModel extends Model{
 	//用于后台图片管理起过滤图片
 	public function fileGoods($file) {
 		foreach ($file as $key=>$value) {
-			
-			$goods = parent::select(array('id,nav,name'),
-					array('where'=>array("thumb='upload/{$_GET['file']}/$value' OR
-					thumb_small='upload/{$_GET['file']}/$value' OR
-							content LIKE '%upload/{$_GET['file']}/$value%'")));
-			if (!Validate::isNullArray($goods)) {
-				$goods[0]->pic = $value;
-				$file[$key] = $goods[0];
+			if(!is_object($value)){
+				$goods = parent::select(array('id,nav,name'),
+						array('where'=>array("thumb='upload/{$_GET['file']}/$value' OR
+						thumb_small='upload/{$_GET['file']}/$value' OR
+								content LIKE '%upload/{$_GET['file']}/$value%'")));
+
+
+				if (!Validate::isNullArray($goods)) {
+					$goods[0]->pic = $value;
+					$goods[0]->name=$goods[0]->name.'[<strong style="color:green;font-size:12px;">轮播器</strong>]';
+					$file[$key] = $goods[0];
+				}
 			}						
 		}
 		return $file;
