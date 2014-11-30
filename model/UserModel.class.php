@@ -40,6 +40,15 @@ class UserModel extends Model{
 		$updateData['pwd']=sha1($updateData['pwd']);
 		return parent::update($where,$updateData);
 	}
+
+	//修改一条数据
+	public function update2(){
+		$where=array("id='{$this->R['id']}'");
+		if(!$this->check->checkOne($this,$where))$this->check->showError();
+		if(!$this->check->checkUpdate($this))$this->check->showError();
+		$updateData=$this->getRequest()->filter($this->fields);
+		return parent::update($where,$updateData);
+	}
 	//查询所有数据
 	public function findAll(){
 		$this->tables=array(DB_FREFIX.'manage a',DB_FREFIX.'level b');

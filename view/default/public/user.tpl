@@ -29,7 +29,8 @@
 				</dd>
 			</dl>
 			<div id="reg">	
-				<form action="?a=user&m=update" method="post" id="updateForm" name="form">
+				<form action="?a=user&m=update2&id={$user->id}" method="post" id="updateForm" name="form">
+
 				{if $user->thumb }
 				<input type="hidden" name="thumb" value="{$user->thumb}"/>
 				{else}
