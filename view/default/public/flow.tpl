@@ -43,7 +43,7 @@
 		<td><a href="?a=cart&m=deleteProduct&id={$value.id}">删除</a></td></tr>
 		{/foreach}
 	</table>
-	<p><span><a href="?a=cart">返回修改</a> | 商品总价： <strong class="red">￥{$total_sale}元</strong></span></p>
+	<p><span><a class="green" href="?a=cart">返回修改</a> | 商品总价： <strong class="red">￥{$total_sale}元</strong></span></p>
 	<table>
 		<caption>收货人信息</caption>
 		<tr><td width="25%">收货人信息：</td><td width="25%">{$frontUser[0]->name}</td><td width="25%">电子邮件：</td><td width="25%">{$frontUser[0]->email}</td></tr>
@@ -51,7 +51,7 @@
 		<tr><td>手机信息：</td><td>{$frontUser[0]->tel}</td><td>标志性建筑：</td><td>{$frontUser[0]->buildings}</td></tr>
 		<tr><td>是否江浙沪：</td><td>{if $frontUser[0]->flag}是{else}否{/if}</td><td>最佳配送时间：</td><td>{$frontUser[0]->time}</td></tr>
 	</table>
-	<p><a href="?a=user&m=address&id={$frontUser[0]->id}">修改收货人信息</a></p>
+	<p><a class="green" href="?a=user&m=address&id={$frontUser[0]->id}">修改收货人信息</a></p>
 	
 	
 	<table>

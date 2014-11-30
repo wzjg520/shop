@@ -39,7 +39,7 @@
 		<td><a href="?a=cart&m=deleteProduct&id={$value.id}">删除</a></td></tr>
 		{/foreach}
 	</table>
-	<p>购物金额小计 <strong class="red">￥{$total_sale}元</strong>，比市场价 <strong class="red">￥{$total_market}元</strong> 节省了 <strong class="red">￥{$total_market-$total_sale}元</strong> <span><a href="?a=cart&m=clearProduct">清空购物车</a> | <a href="./">继续购物</a></span></p>
+	<p class="buy_total">购物金额小计 <strong class="red">￥{$total_sale}元</strong>，比市场价 <strong class="red">￥{$total_market}元</strong> 节省了 <strong class="red">￥{$total_market-$total_sale}元</strong> <span><a style="color:red;" href="?a=cart&m=clearProduct">清空购物车</a> | <a style="color:green;" href="./">继续购物</a></span></p>
 	<div class="now_pay"><a href="?a=cart&m=flow">结 算</a></div>
 </div>
 {include file='default/public/footer.tpl'}
