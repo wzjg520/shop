@@ -5,6 +5,7 @@ class PicAction extends Action {
 	public function __construct() {
 		parent::__construct();
 		$this->goods = new GoodsModel();
+		$this->rotator=new RotatorModel();
 	}
 	
 	public function index() {
@@ -13,7 +14,7 @@ class PicAction extends Action {
 		$dirArr = array();
 		while (!!$dirName = readdir($dirPath)) {
 			if ($dirName != '.' && $dirName != '..') {
-				$dirArr[count(scandir(dirname(dirname(__FILE__)).'/upload/'.$dirName.'/')) - 2] = $dirName;
+				$dirArr[$dirName.' 共 '.(count(scandir(dirname(dirname(__FILE__)).'/upload/'.$dirName.'/')) - 2).' 张'] = $dirName;
 			}				
 		}
 		$this->tpl->assign('dir', $dirArr);
@@ -30,8 +31,20 @@ class PicAction extends Action {
 	public function file() {
 		if (isset($_GET['file'])) {
 			$file = scandir(dirname(dirname(__FILE__)).'/upload/'.$_GET['file'].'/');
-			$this->tpl->assign('file', $this->goods->fileGoods($file));
+			 $fileObj=$this->rotator->fileRotator($this->goods->fileGoods($file));
+
+			$this->tpl->assign('file', $fileObj);
+			
 			$this->tpl->display(ADMIN_STYLE.'pic/file.tpl');
+		}
+	}
+
+	//删除空目录
+	public function delDir(){
+		if (isset($_GET['file'])) {
+			$dirPath = dirname(__DIR__).'/upload/'.$_GET['file'];
+			rmdir($dirPath);
+			$this->redirect->success('目录删除成功',PREV_URL);
 		}
 	}
 	

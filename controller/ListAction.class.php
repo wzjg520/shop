@@ -6,6 +6,7 @@ class ListAction extends Action{
 		parent::__construct();
 		$this->nav=new NavModel();
 		$this->goods=new GoodsModel();
+		$this->cart=new cart();
 	}
 	public function index($array=null){
 		$this->page(15,$this->goods);
@@ -19,6 +20,7 @@ class ListAction extends Action{
 		$this->tpl->assign('hotSale',$this->goods->getHotSale());
 		$this->tpl->assign('url', Tool::getUrl(true));
 		$this->tpl->assign('brandUrl', Tool::getUrl(false,true,false));
+		$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 		$this->tpl->assign('priceUrl', Tool::getUrl(false,false,true));
 		$this->tpl->display(FRONT_STYLE.'public/list.tpl');
 	}

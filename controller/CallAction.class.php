@@ -22,6 +22,11 @@ class CallAction extends Action{
 					$height=300;
 					$info='图片上传成功';
 					break;
+				case 'rotator':
+					$width=1200;
+					$height=530;
+					$info='轮播器图片上传成功';
+					break;
 				default :
 					exit('非法操作');
 			}

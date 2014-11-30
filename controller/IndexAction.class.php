@@ -9,7 +9,8 @@ class IndexAction extends Action{
 		$this->nav=new NavModel();
 		$this->goods=new GoodsModel();
 		$this->brand=new BrandModel();
-		$this->cart=new cart();
+		$this->cart=new Cart();
+		$this->rotator=new RotatorModel();
 	}
 	public function index(){
 		$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
@@ -18,6 +19,7 @@ class IndexAction extends Action{
 		$this->tpl->assign('promoteGoods',$this->goods->getPromoteGoods());
 		$this->tpl->assign('recommendGoods',$this->goods->getRecommendGoods());
 		$this->tpl->assign('allBrand',$this->brand->getAll());
+		$this->tpl->assign('rotator',$this->rotator->getAll());
 		$this->tpl->display(FRONT_STYLE.'public/index.tpl');
 	}
 	

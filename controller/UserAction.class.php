@@ -14,9 +14,11 @@ class UserAction extends Action{
 		$this->goods=new GoodsModel();
 		$this->commend=new CommendModel();
 		$this->collect=new CollectModel();
+		$this->cart=new cart();
 	}
 	public function index(){
 		$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
+		$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 		$this->tpl->display(FRONT_STYLE.'public/user.tpl');
 	}
 	public function reg(){
@@ -27,6 +29,7 @@ class UserAction extends Action{
 				$this->redirect->error('会员注册失败');
 			};
 		}
+		$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 		$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
 		$this->tpl->display(FRONT_STYLE.'public/reg.tpl');
 	}
@@ -38,6 +41,7 @@ class UserAction extends Action{
 				$this->redirect->success('登陆成功','?a=index');
 			}
 		}
+		$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 		$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
 		$this->tpl->display(FRONT_STYLE.'public/login.tpl');
 	}
@@ -49,6 +53,7 @@ class UserAction extends Action{
 		$this->page(12,$this->collect);
 		$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
 		$this->tpl->assign('allCollect',$this->collect->getAllCollect());
+		$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 		$this->tpl->display(FRONT_STYLE.'public/user_mycollect.tpl');
 	}
 	//添加收藏并跳转到收藏页
@@ -70,6 +75,7 @@ class UserAction extends Action{
 		$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
 		$this->tpl->assign('frontUser',$this->address->findOne());
 		$this->tpl->assign('allAddress',$this->address->findAll());
+		$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 		$this->tpl->display(FRONT_STYLE.'public/user_address.tpl');
 	}
 	//设置收货人为首选
@@ -85,6 +91,7 @@ class UserAction extends Action{
 		$this->page(10,$this->order);
 		$this->tpl->assign('allOrder',$this->order->findAllFrontOrder());
 		$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
+		$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 		$this->tpl->display(FRONT_STYLE.'public/user_order.tpl');
 		
 	}
@@ -96,6 +103,7 @@ class UserAction extends Action{
 			$this->tpl->assign('history',$this->goods->getHistory());
 			$this->tpl->assign('hotSale',$this->goods->getHotSale());
 			$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
+			$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 			$this->tpl->display(FRONT_STYLE.'public/user_alipay.tpl');	
 		}
 	}
@@ -106,6 +114,7 @@ class UserAction extends Action{
 			$this->tpl->assign('history',$this->goods->getHistory());
 			$this->tpl->assign('hotSale',$this->goods->getHotSale());
 			$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
+			$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 			$this->tpl->display(FRONT_STYLE.'public/user_transfer.tpl');
 		}
 	}
@@ -116,6 +125,7 @@ class UserAction extends Action{
 			$this->tpl->assign('history',$this->goods->getHistory());
 			$this->tpl->assign('hotSale',$this->goods->getHotSale());
 			$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
+			$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 			$this->tpl->display(FRONT_STYLE.'public/user_cash.tpl');
 		}
 	}
@@ -124,6 +134,7 @@ class UserAction extends Action{
 		if(!$this->order->findOne())exit('非法操作');
 		$this->tpl->assign('oneOrder',$this->order->findOne());
 		$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
+		$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 		$this->tpl->display(FRONT_STYLE.'public/user_order_details.tpl');
 	}
 	//商品评论
@@ -134,6 +145,7 @@ class UserAction extends Action{
 			$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
 			$this->tpl->assign('oneGoods',$this->order->getCommendGoods());
 			$this->tpl->assign('oneCommend',$this->commend->findOne());
+			$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 			$this->tpl->display(FRONT_STYLE.'public/user_commend.tpl');
 		}
 	}
@@ -143,6 +155,7 @@ class UserAction extends Action{
 		$this->tpl->assign('allCommend',$this->commend->getAllUserCommend());
 		//var_dump($this->commend->getAllUserCommend());
 		$this->tpl->assign('frontTenNav',$this->nav->getFrontTenNav());
+		$this->tpl->assign('cartGoodsCount',$this->cart->getCount());
 		$this->tpl->display(FRONT_STYLE.'public/user_mycommend.tpl');
 	}
 	//取消订单

@@ -115,7 +115,7 @@ class Image{
 	public function outImage($param=''){
 		$end=strrchr($this->file, '.');
 		$start=substr($this->file,0,-strlen($end));
-		$this->file=$start.$param.$end;
+		$this->file=$start.$param.'.png';
 		imagepng($this->thumb,$this->file);
 		imagedestroy($this->thumb);
 		imagedestroy($this->img);
