@@ -60,137 +60,13 @@
 #sidebar dl dd.title a:hover{
 	text-decoration:underline;
 }
-/*#main {
-	float:right;
-	margin:10px 0 0 0;
-	width:785px;
-}
-#main div.advert{
-	width:783px;
-	height:153px;
-}
-#main h2{
-	height:34px;
-	line-height:34px;
-	background:url(../images/list_h2_bg.png) repeat-x;
-	text-indent:25px;
-	color:#56A5EE;
-	font-size:12px;
-}
-#main div{
-	margin-bottom:10px;
-}
-#main div.pro_list{
-	border:1px solid #C5E4FF;
-	padding:0 0 30px 0;
-}
-#main dl {
-	width:224px;
-	padding:15px 0 0 24px;
-	display:inline-block;
-}	
-#main dl dt{
-	width:224px;
-	border:1px solid #C5E4FF;
-}	
-#main dl dt img{
-	margin:2px 0 0 2px;
-}
-#main dl dd{
-	padding:5px 0;
-}
-#main dl dd strong{
-	font-size:14px;
-	font-family:Tahoma;
-	color:red;
-}	
-#main dl dd del{
-	color:#999;
-}	
-#main dl dd.title a{
-	font-size:14px;
-	color:#026ACB;
-}	
-#main dl dd.title a:hover{
-	text-decoration:underline;
-}
-#main div.brand{
-	border:1px solid #C5E4FF;
-}
-#main div.brand ul{
-	padding:15px;
-}
-#main div.brand ul li{
-	display:inline-block;
-	
-}
-#main div.brand ul li a{
-	padding:5px 3px;
-	color:maroon;
-	border:1px solid #ccc;
-}
-#main div.brand ul li a:hover{
-	background:lightgreen;
-	color:#FFF;
-}*/
 p.clear{
 	clear:both;
-}
-
-
-
-#banner{
-	width:783px;
-	height:153px;
-	position:relative;
-	overflow:hidden;
-	background: #abcdef;
-}
-#banner img{
-	display:block;
-	width:783px;
-	height:153px;
-	position:absolute;
-	top:0;
-	left:0;
-	z-index:1;
-}
-#banner ul{
-	position:absolute;
-	top:131px;
-	left:620px;	
-	z-index:4;
-	list-style-type: none;
-}
-#banner ul li{
-	float:left;
-	padding:0 5px;
-	font-size:16px;
-	color:#999;
-	cursor:pointer;
-}
-#banner span{
-	width:783px;
-	height:25px;
-	position:absolute;
-	top:128px;
-	left:0;
-	background:#333;
-	opacity:0.3;
-	filter:alpha(opacity=30);
-	z-index:3;
-}
-#banner strong{
-	position:absolute;
-	top:134px;
-	left:10px;
-	color:#fff;
-	z-index:4;
 }
 /*huahua*/
 /*大的轮播图*/
 #HP_carousel .icon, .scroll-box .btns .switcher li {
-    background-image: url("http://ostatic.theoutnet.cn/skin/frontend/shouke/cosmo_ton/css/img/logo.png");
+    background-image: url("../images/handle.png");
     background-repeat: no-repeat;
 }
 .scroll-box {
@@ -243,19 +119,19 @@ p.clear{
     z-index: 2999;
 }
 .scroll-box .btns .prev {
-    background-position: 0 -80px;
+    background-position: 0 0;
     left: -10px;
 }
 .scroll-box .btns .next {
-    background-position: 0 -133px;
+    background-position: 10px -53px;
     right: -10px;
 }
 .scroll-box .btns .prev:hover {
-    background-position: -53px -80px;
+    background-position: -53px 0;
     left: -10px;
 }
 .scroll-box .btns .next:hover {
-    background-position: -53px -133px;
+    background-position: -43px -53px;
     right: -10px;
 }
 .scroll-box .btns .switcher {
@@ -268,7 +144,7 @@ p.clear{
     width: 100px;
 }
 .scroll-box .btns .switcher li {
-    background-position: -260px -40px;
+    background-position: -110px 0;
     cursor: pointer;
     float: left;
     font-size: 0;
@@ -279,9 +155,8 @@ p.clear{
     width: 14px;
 }
 .scroll-box .btns .switcher li.on {
-    background-position: -260px -54px;
+    background-position: -110px -14px;
 }
-
 
 #HP_carousel {
     height: 530px;
@@ -304,34 +179,6 @@ p.clear{
     position: absolute;
     width: 19999px;
 }
-#HP_carousel .btns {
-    position: absolute;
-    width: 1200px;
-    z-index: 10;
-}
-#HP_carousel .btns b {
-    display: block;
-    height: 14px;
-    left: 50%;
-    overflow: hidden;
-    position: absolute;
-    top: 555px;
-    width: 100px;
-}
-#HP_carousel .btns b i {
-    background: url("http://ostatic.theoutnet.cn/skin/frontend/shouke/cosmo_ton/images/2013/newlanding/HP_carousel_bottom_btn.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
-    cursor: pointer;
-    float: left;
-    font-size: 0;
-    height: 14px;
-    margin-right: 6px;
-    overflow: hidden;
-    width: 14px;
-}
-#HP_carousel .btns b i.on {
-    background-position: 0 bottom;
-    cursor: default;
-}
 #HP_carousel .btns span {
     cursor: pointer;
     display: block;
@@ -341,24 +188,6 @@ p.clear{
     top: 238px;
     width: 53px;
     z-index: 2999;
-}
-#HP_carousel .btns span i {
-    background: url("http://ostatic.theoutnet.cn/skin/frontend/shouke/cosmo_ton/images/2013/newlanding/HP_carousel_btn.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
-    height: 106px;
-    position: absolute;
-    width: 53px;
-}
-#HP_carousel .btns span i:hover {
-    background: url("http://ostatic.theoutnet.cn/skin/frontend/shouke/cosmo_ton/images/2013/newlanding/HP_carousel_btn_hover.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
-}
-#HP_carousel .btns span.prev {
-    left: -10px;
-}
-#HP_carousel .btns span.next i {
-    top: -53px;
-}
-#HP_carousel .btns span.next {
-    right: -10px;
 }
 #HP_carousel .pattern a {
     float: right;

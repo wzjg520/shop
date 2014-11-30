@@ -40,7 +40,7 @@
 		<td>{$value.num} </td>
 		<td>{$value.weight*$value.num}/kg </td>
 		<td><strong class="red">￥{$value.price_sale*$value.num}元</strong></td>
-		<td><a href="?a=cart&m=deleteProduct&id={$value.id}">删除</a></td></tr>
+		<td><a class="red" href="?a=cart&m=deleteProduct&id={$value.id}">删除</a></td></tr>
 		{/foreach}
 	</table>
 	<p><span><a class="green" href="?a=cart">返回修改</a> | 商品总价： <strong class="red">￥{$total_sale}元</strong></span></p>

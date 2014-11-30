@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="view/default/style/basic.css" />
 <link rel="stylesheet" type="text/css" href="view/default/style/list.css" />
 <link rel="stylesheet" type="text/css" href="view/default/style/user_mycommend.css" />
+<script type="text/javascript" src="view/default/js/jquery.js"></script>
 </head>
 <body>
 {include file='default/public/header.tpl'}

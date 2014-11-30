@@ -55,6 +55,7 @@ $(function(){
 		banner($('#banner ul li').get(banner_index),banner_index==0 ? $('#banner ul li').length-1 : banner_index-1);
 		banner_index++;
 	}
+
 	// 销售排行
 	$('#sale_num').find('li').mouseover(function(e){
 		$(this).find('.bg_hover').css({

@@ -131,7 +131,7 @@
                 }
                 go(1, true);
                 num++;
-            }, 30000);
+            }, 4000);
             p.mouseover(function() {
                 clearInterval(si);
             })
@@ -142,7 +142,7 @@
                 		return;
                 	}
                		go(1, true);
-                }, 30000);
+                }, 4000);
             })
         }
         var min_w = 1200;

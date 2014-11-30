@@ -195,12 +195,121 @@ span.succ{
 	background: url(../images/weizhi.png)no-repeat left center;
 	padding-left:20px;
 }
+#sait a{
+	color:#0b235f;
+}
+#blackHead{
+	width:100%;
+	height: 70px;
+	background:rgba(53, 53, 53, 0.9)!important;
+    background:#353535; 
+    filter:Alpha(opacity=90);/*　使用IE专属滤镜实现IE背景透明*/
+    text-align: center;
+    display: none;
+    position: fixed;
+    top:0;
+    z-index:999999;
+}
+#blackHead .inner_top{
+	width:1200px;
+	height: 70px;
+	line-height: 70px;
+	margin:0 auto;
+	text-align: center;
+	 position: relative;
+}
+#blackHead span.tel{
+	display: block;
+	font-size: 24px;
+	color:#f2f2f2;
+	position: absolute;
+	top:0;
+	left: 0;
+}
+#blackHead span.tel em.tel_ico{
+	display: inline-block;
+	margin: 5px 10px 0 0;
+	width:24px;
+	height: 23px;
+	background: url(../images/phone_cart.png) no-repeat 0 -36px;
+}
+#blackHead h1{
+	width:500px;
+	height:60px;
+	margin:0 auto;
+	font-size:12px;
+}
+#blackHead h1 a{
+	display:inline-block;	
+}
+#blackHead h1 form{
+	display: inline-block;
+	line-height: 30px;
+	vertical-align: 14px;
+	width:225px;
+	position: relative;
+}
+
+#blackHead h1 form input[type="text"]{
+	background: none;
+	border:1px solid #ccc;
+	padding:6px;
+	border-radius: 4px;
+	width:200px;
+	margin-left: 10px;
+	color: #f2f2f2;
+}
+#blackHead h1 form input[type="submit"]{
+	position: absolute;
+	top:0;
+	right:0;
+	width:28px;
+	height: 28px;
+	border:none;
+	background: url(../images/search_zoom.png) no-repeat left center;
+	cursor:pointer;
+
+}
+#blackHead h1 img{
+	padding-top:6px;
+}
+#blackHead .inner_top p{
+	position: absolute;
+	top:0;
+	right:0;
+	color: #fff;
+	font-size: 14px;
+}
+#blackHead .inner_top p a{
+	color: #fff;
+	font-size: 14px;
+}
+#blackHead p i.cat{
+	display: inline-block;
+	width:24px;
+	height: 27px;
+	vertical-align: -6px;
+	background: url(../images/phone_cart.png) no-repeat -1px 0;
+}
+#blackHead p strong{
+	color: #ff0000;
+	font-style: normal;
+}
 
 #footer{
 	padding:20px;
 	clear:both;
 	text-align:center;
+	background:rgba(53, 53, 53, 0.9)!important;
+    background:#353535; 
+    filter:Alpha(opacity=90);/*　使用IE专属滤镜实现IE背景透明*/
+	margin-top:20px;
 }
 #footer p{
 	padding:5px 0;
+	color: #fff;
 }
+#footer p a{
+	color: #fff;
+}
+

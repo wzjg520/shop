@@ -297,6 +297,55 @@
 	border:none;
 	cursor:pointer;
 }
+#main .personal_info{
+	margin-top:20px;
+	border:1px solid #ddd;
+}
+#main .personal_info:hover{
+	border:1px solid #777;
+}
+#main .personal_info dl{
+	width:868px;
+	margin:0;
+	border:none;
+	padding-left: 20px;
+}
+#main .personal_info dl dt img{
+	width:100px;
+	height: 100px;
+	float: left;
+	margin-right: 15px;
+}
+#main .personal_info dl dd p.user_name{
+	padding-bottom: 25px;
+	font-size: 14px;
+}
+#main .personal_info dd p.infor_progress span{
+	display: inline-block;
+	width:180px;
+	height: 18px;
+	border:1px solid #ccc;
+	vertical-align: -4px;
+}
+#main .personal_info dd p.infor_progress span em{
+	display: inline-block;
+	width:120px;
+	height: 18px;
+	background: #dc602d;
+}
+#main .personal_info #reg{
+	height: auto;
+	padding-bottom: 20px;
+}
+#main .personal_info #reg dl{
+	background: none;
+	width:100%;
+	padding:0;
+}
+#main .personal_info #reg dd{
+	padding:5px 25px;
+}
+
 
 	
 	

@@ -36,6 +36,32 @@
 		{/foreach}
 	</ul>
 </div>
+<div id="blackHead">
+	<div class="inner_top">
+		<span class="tel"><em class="tel_ico"></em>400-878-1619</span>
+		<h1>
+			<a href="./"><img src="view/default/images/small_logo.png" alt="花花家LOGO"></a>
+			<form method="post" name="form" action="?a=list&m=searchGoods">
+				<input type="text" name="content"/>
+				<input type="submit" name="search" value="" />
+			</form>
+		</h1>
+		
+		{if $smarty.cookies.user}
+		<p>
+			您好，{$smarty.cookies.user}，<a href="?a=user">个人中心</a> | <a href="?a=cart"><i class="cat"></i> 购物袋(<strong>0</strong>)</a> | <a href="?a=user&m=loginOut">退出</a>
+		</p>
+		{else}
+		<p>
+			<a href="?a=cart"><i class="cat"></i> 购物袋(<strong>0</strong>)</a>
+			<a href="?a=user&m=login">登录</a> | 
+			<a href="?a=user&m=reg">注册</a>
+		</p>
+		{/if}
+
+	</div>
+</div>
+<script type="text/javascript" src="view/default/js/basic.js"></script>
 <!-- <div id="search">
 	<form method="post" name="form" action="?a=list&m=searchGoods">
 		<select name="way">
