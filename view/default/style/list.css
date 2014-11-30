@@ -235,7 +235,24 @@
 	width:40px;
 	text-align:center;
 }
-
+#main table td.control a.choose{
+	color: #eb6427;
+}
+#main table td.control a.repair{
+	color: green;
+}
+#main table td.control a.del{
+	color: red;
+}
+#main table td.control a:hover{
+	text-decoration: underline;
+}
+#main table td.order_nums a{
+	color:#0d082b;
+}
+#main table td.order_nums a:hover{
+	text-decoration: underline;
+}
 #main form dl dd{
 	padding:3px 240px;
 }

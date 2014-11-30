@@ -22,7 +22,7 @@
 			<tr><th>收货人姓名</th><th>地址</th><th>电话</th><th>邮编</th><th>电子邮件</th><th>标志性建筑</th><th>操作</th></tr>
 			{foreach from=$allAddress key=key item=value}
 			<tr><td>{$value->name}</td><td>{$value->address}</td><td>{$value->tel}</td><td>{$value->code}</td><td>{$value->email}</td><td>{$value->buildings}</td>
-			<td>{if $value->selected}是{else}<a href="?a=user&m=selected&id={$value->id}">首选</a>{/if} | <a href="?a=user&m=address&id={$value->id}">修改</a> | <a href="?a=user&m=RunDelete&id={$value->id}" onclick="return confirm('您确定要删除吗') ? true : false">删除</a></td></tr>
+			<td class="control">{if $value->selected}是{else}<a class="choose" href="?a=user&m=selected&id={$value->id}">首选</a>{/if} | <a class="repair" href="?a=user&m=address&id={$value->id}">修改</a> | <a class="del" href="?a=user&m=RunDelete&id={$value->id}" onclick="return confirm('您确定要删除吗') ? true : false">删除</a></td></tr>
 			{/foreach}
 		</table>
 		<h2>修改收货人信息</h2>

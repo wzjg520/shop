@@ -35,6 +35,9 @@
 	overflow: hidden;
 	text-align: right;
 }
+#cart p.buy_total{
+	text-align: left;
+}
 #cart p span{
 	float:right;
 }
